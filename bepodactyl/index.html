@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bépodactyl : Exercices d'apprentissage de la disposition BÉPO</title>
+<script type="text/javascript" src="js/fonctions_texte.js"></script>
+<script type="text/javascript" src="js/functions_page.js"></script>
+<script type="text/javascript" src="js/exo.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body onkeydown="get_key(event,'down')" onkeyup="get_key(event,'up')">
+
+<div class="bar" id="bar">
+  <a href="http://tazzon.free.fr/dactylotest/"><img src="../home.png" alt="home" style="padding-bottom:2px"/></a>
+  <a href="../dactylotest/" title="Testez votre vitesse de frappe">Dactylotest</a>
+  <a href="../tridactyl/" title="Perfectionnez votre frappe grâce aux trigrammes">Tridactyl</a>
+  <a href="../bepodactyl/" title="Bien débutez avec la disposition de clavier BÉPO">Bépodactyl</a>
+</div>
+
+<div class="head">
+	<h1>— Bépodactyl —</h1><br/>
+	Exercices d'apprentissage de la disposition BÉPO.
+</div>
+<!--input type="text" id="set_time" /-->
+<div class="main">
+	<p>
+		<input type="button" id="but_-" onclick="change_exo('-')" value="−"/>
+		<input type="button" id="but_+" onclick="change_exo('+')" value="+"/>
+		<input type="button" id="but_+" onclick="change_exo('=')" value="Recommencer"/>
+		<input type="button" onClick="view_options('block')" value="Options" />
+		<input type="button" onClick="view_help('block')" value="?" />		
+	 </p>
+	<br/>
+       
+	<div id="aff_kb"></div>
+
+
+	<hr/>
+	<div style="width:100%"><strong style="float:left;width:65%">Exercice nº<span id="exo_nb"></span></strong><span id="nb_vies" style="float:left;text-align:right;width:20%"></span></div>
+	<br/><br/>	
+	<div class="ici" id="ici">
+		<p class="rd_txt" id="rd_txt"><span style="color:red"><strong>Javascript doit être activé ! Vous pouvez le faire en modifiant les préférences de votre navigateur. Si vous ne savez pas comment faire, consultez l'aide de celui-ci.</strong></span></p>
+		<p>>> <input type="text" onkeyup="test(event)" onkeydown="" id="txt" class="txt"/></p>
+	</div>
+	<hr/>
+
+	<div id="resultats" class="result"></div>
+
+</div>
+
+<div id="voile" class="voile"></div>
+
+<div id="options" class="options">
+  <p style="margin-bottom:10px"><strong>Options</strong><p>
+  <p>
+    <!--input type="checkbox" id="val_kb" checked="checked" onChange="aff_kb(this.checked)" /> Afficher l’image du clavier<br/-->
+    
+    Image du clavier<br/>
+    <input type="radio" name="type_kb" id="type_kb" checked="checked" value="kb_decal"       onChange="type_kb=this.value;aff_kb(true)"  /> Clavier décalé<br/>
+    <input type="radio" name="type_kb" id="type_kb"                   value="kb_typematrix"  onChange="type_kb=this.value;aff_kb(true)"  /> Typematrix<br/>
+    <input type="radio" name="type_kb" id="type_kb"                   value="none"           onChange="type_kb=this.value;aff_kb(false)" /> Pas de clavier<br/>
+    <br/>
+    <input type="checkbox" id="val_curseur" onChange="val_curseur(this.checked)" /> Activer le curseur<br/>
+    <br/>
+    <input type="checkbox" id="val_jeu" onChange="modejeu(this.checked)" /> Mode jeu<br/>
+    <!--input type="checkbox" id="val_nbsp" checked="checked" onChange="nbspace=this.checked;ligne_suivante(true)" /> Utiliser les espaces insécables<br/-->
+    <!--input type="checkbox" id="anti_correct" onChange="val_anti_correct(this.checked)" /> Activer l’anti-correction<br/-->
+  </p>
+  <p style="text-align:right;margin-top:10px">
+    <!--input type="button" onclick="valide_options()" value="Valider"/-->
+    <input type="button" onclick="view_options('none')" value="Fermer"/>
+  </p>
+</div>
+
+<div id="help" class="help">
+  <p style="margin-bottom:10px"><strong>Aide</strong><p>
+  <p>
+    Bépodactyl permet d’apprendre et de s’entraîner avec des exercices créés spécifiquement pour la disposition de clavier BÉPO.
+  </p>
+  <p>
+    Pour cela, vous pouvez utiliser l’image virtuelle du clavier (voir les options) afin de ne pas regarder les touches de votre clavier et ainsi favoriser les réflexes musculaires.
+  </p>
+  <p>
+    Commencer par les premiers exercices puis en fonction de votre progression passez aux suivants jusqu'à connaître le clavier sur le bout des doigts. Une fois que ce sera le cas, vous pourrez utiliser Dactylotest et prendre du plaisir à taper des textes le plus vite possible mais avec également le moins de fautes de frappe possible
+  </p>
+  <p style="text-align:right;margin-top:10px">
+    <input type="button" onclick="view_help('none')" value="Fermer"/>
+  </p>
+</div>
+
+<script type="text/javascript" src="js/start.js"></script>
+
+
+
+</body>
+</html>
+	
