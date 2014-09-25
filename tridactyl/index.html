@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tridactyl : perfectionnement de la frappe par les trigrammes</title>
+<script type="text/javascript" src="js/fonctions_texte.js"></script>
+<script type="text/javascript" src="js/functions_page.js"></script>
+<script type="text/javascript" src="js/req.js"></script>
+<script type="text/javascript" src="js/lecon3.js"></script>
+<script type="text/javascript" src="js/lecon7.js"></script>
+<script type="text/javascript" src="js/lecon11.js"></script>
+<script type="text/javascript" src="js/lecon15.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="bar" id="bar">
+  <a href="http://tazzon.free.fr/dactylotest/"><img src="../home.png" alt="home" style="padding-bottom:2px"/></a>
+  <a href="../dactylotest/" title="Testez votre vitesse de frappe">Dactylotest</a>
+  <a href="../tridactyl/" title="Perfectionnez votre frappe grâce aux trigrammes">Tridactyl</a>
+  <a href="../bepodactyl/" title="Bien débutez avec la disposition de clavier BÉPO">Bépodactyl</a>
+</div>
+
+<div class="head">
+	<h1>— Tridactyl —</h1><br/>
+	Perfectionnement de la frappe par les trigrammes.
+</div>
+<!--input type="text" id="set_time" /-->
+<div class="main">
+  <p class="text_nmbr" id="text_nmbr" type="text" value=""/></p>
+	<hr/>
+	<div class="ici" id="ici">
+		<p class="rd_txt" id="rd_txt"><span style="color:red"><strong>Javascript doit être activé ! Vous pouvez le faire en modifiant les préférences de votre navigateur. Si vous ne savez pas comment faire, consultez l'aide de celui-ci.</strong></span></p>
+		<p>>> <input type="text" onkeyup="test(event);" onkeydown="next(event)" id="txt" class="txt"/></p>
+	</div>
+	<hr/>
+
+	<div id="resultats" class="result"></div>
+
+</div>
+
+<div id="voile" class="voile"></div>
+
+<div id="options" class="options">
+  <p style="margin-bottom:10px"><strong>Options</strong><p>
+  <p>
+    <input type="checkbox" id="val_curseur" onChange="val_curseur(this.checked)" /> Activer le curseur<br/>
+    <input type="checkbox" id="anti_correct" onChange="val_anti_correct(this.checked)" /> Activer l’anti-correction<br/>
+  </p>
+  <p style="text-align:right;margin-top:10px">
+    <!--input type="button" onclick="valide_options()" value="Valider"/-->
+    <input type="button" onclick="view_options('none')" value="Fermer"/>
+  </p>
+</div>
+
+
+
+<script type="text/javascript" src="js/start.js"></script>
+
+</body>
+</html>
