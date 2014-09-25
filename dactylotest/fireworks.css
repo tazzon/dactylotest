@@ -1,0 +1,39 @@
+/* fireworks styles */
+
+#fireworks-template {
+ display:none;
+}
+
+#fireContainer {
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:706;
+}
+
+.firework {
+ /* containing box which flies out first */
+ position:absolute;
+ left:0px;
+ top:0px;
+ font-size:1px;
+ width:4px;
+ height:4px;
+ border:1px solid #333;
+ background:#666;
+}
+
+.fireworkParticle {
+ /* elements that explode from the container */
+ position:absolute;
+ font-size:1px;
+ width:10px;
+ height:10px;
+ overflow:hidden;
+}
+
+.fireworkParticle img {
+ display:block;
+ width:100px;
+}
+

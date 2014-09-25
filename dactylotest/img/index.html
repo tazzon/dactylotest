@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dactylotest : mesurez votre vitesse de frappe au clavier</title>
+<script type="text/javascript" src="js/fonctions_texte.js"></script>
+<script type="text/javascript" src="js/functions_page.js"></script>
+<script type="text/javascript" src="js/replay.js"></script>
+<script type="text/javascript" src="js/req.js"></script>
+<script type="text/javascript" src="js/ghost.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<h1>— Dactylotest —</h1>
+
+<div class="main">
+
+  <p class="text_nmbr" id="text_nmbr" type="text" value=""/></p>
+  <div class="ici">
+    <div id="err" class="err">— ERREUR —</div>
+    <p class="rd_txt" id="rd_txt"><span style="color:red"><strong>Javascript doit être activé ! Vous pouvez le faire en modifiant les préférences de votre navigateur. Si vous ne savez pas comment faire, consultez l'aide de celui-ci.</strong></span></p>
+    <p><textarea onkeydown="t_car[this.value.length]=new Date().getTime();list_frappes(event,this.value)" onkeyup="test(event)" id="txt" class="txt"></textarea></p>
+  </div>
+  <div>
+    <div class="new_text">
+      <input type="button" id="new_txt" onclick="new_text('new');this.blur()" value="Nouveau texte"/> <input type="button" id="same_txt" onclick="new_text('');this.blur()" value="Recommencer ce texte"/>
+      <p style="float:right">
+        <span id="d_replay">
+        Lecteur <input type="button" style="width:60px" id="replay" onclick="replay()" value="Play"/>
+        <input type="button" style="width:60px" onclick="replay('stop')" value="Stop"/>
+            <select id="speed_replay" onChange="vitesse=this.value;this.blur()" style="width:inherit">
+              <option value="1">×1 </option>
+              <option value="2">×2 </option>
+              <option value="3">×3 </option>
+              <option value="4">×4 </option>
+            </select></span><br/><br/>
+        ⇒ <input type="button" onclick="load_ghost('list')" value="Liste des fantômes pour ce texte…"/>
+      </p>
+      <br/>
+       Méthode : <select id="methode" onChange="this.blur()">
+        <option value="rand">aléatoire </option>
+        <option value="number">sélection </option>
+      </select>
+      <br/>
+       Langue  : <select id="lang" onChange="this.blur()">
+        <option value="fr">français </option>
+        <option value="en">anglais </option>
+      </select>
+      <br/>
+      <hr/>
+    </div>
+    <div class="options">
+      <input type="button" onclick="this.value=view_options()" value="Afficher les options">
+      <div class="view_options" id="view_options">
+        <p id="options">
+          <input type="checkbox" onclick="options()" id="apo_typ" /> apostrophe typographique<br/>
+          <input type="checkbox" onclick="options()" id="maj_acc" /> majuscules accentuées<br/>
+          <input type="checkbox" onclick="options()" id="ligat" /> ligatures (æ, œ)<br/>
+          <input type="checkbox" onclick="options()" id="pds" /> points de suspension « … »<br/>
+          <input type="checkbox" onclick="options()" id="no_brk_spc" /> espaces insécables<br/>   <input type="checkbox" onclick="options()" id="no_brk_spc_display"/> les rendre visibles <br/>
+          <input type="checkbox" onclick="options()" id="quote_fr" /> guillemets français « »<br/>
+        </p><br/>
+      <input type="button" value="Enregister les options" onclick="save_opt();this.blur()"/>
+      </div>
+      <hr/>
+      <input type="checkbox" id="ghost_actif" /> activer le fantôme <span id="demo_ghost"> </span><br/>
+      <input type="checkbox" id="curseur_actif" checked="checked" /> activer le curseur <span id="demo_curseur"> </span><br/>        
+    </div>
+    <div id="resultats" class="result"></div>
+  </div>
+</div>
+
+<div class="main">
+	<a href="http://www.lecturel.com/clavier/mots-par-minute.php"><img src="img/lecturel.png" alt="lecturel.com" title="Ce test est inspriré de celui du site www.lecturel.com" /></a>
+	<a href="http://bepo.fr"><img src="http://bepo.fr/wiki/skins/bepo/bepo-powered.png" alt="bepo.fr" title="Ce test à été intégralement écrit en BÉPO !" /></a>
+</div>
+
+<div style="display:none"><img src="img/indicator.gif" alt="c'est juste histoire qu'il soit chargé" /></div>
+
+<script type="text/javascript" src="js/start.js"></script>
+
+</body>
+</html>
+					

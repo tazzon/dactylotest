@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dactylotest : mesurez votre vitesse de frappe au clavier</title>
+<script type="text/javascript" src="js/fonctions_texte_2.js"></script>
+<script type="text/javascript" src="js/err_test.js"></script>
+<script type="text/javascript" src="js/fonctions_page_2.js"></script>
+<script type="text/javascript" src="js/replay.js"></script>
+<script type="text/javascript" src="js/req.js"></script>
+<script type="text/javascript" src="js/ghost.js"></script>
+<script type="text/javascript" src="js/fireworks.js"></script>
+<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="fireworks.css" />
+
+</head>
+
+<body onkeyup="vidactyl(event)">
+
+<div class="bar" id="bar">
+  <a href="http://tazzon.free.fr/dactylotest/"><img src="../home.png" alt="home" style="padding-bottom:2px"/></a>
+  <a href="../dactylotest/" title="Testez votre vitesse de frappe">Dactylotest</a>
+  <a href="../tridactyl/" title="Perfectionnez votre frappe grâce aux trigrammes">Tridactyl</a>
+  <a href="../bepodactyl/" title="Bien débutez avec la disposition de clavier BÉPO">Bépodactyl</a>
+  <span style="color:#fafafa;float:right;padding-right:10px" id="welcome"></span>
+</div>
+
+<h1>— Dactylotest —</h1>
+
+<div class="main">
+
+  <p class="text_nmbr" id="text_nmbr"></p>
+  <div class="ici">
+    <div id="err" class="err">— ERREUR —</div>
+    <p class="rd_txt" id="rd_txt"><span style="color:red"><strong>Javascript doit être activé ! Vous pouvez le faire en modifiant les préférences de votre navigateur. Si vous ne savez pas comment faire, consultez l'aide de celui-ci.</strong></span></p>
+    <p><textarea onkeydown="t_car[this.value.length]=new Date().getTime();list_frappes(event,this.value)" onkeyup="test(event)" id="txt" class="txt" cols="93" rows="7"></textarea></p>
+  </div>
+  <div>
+    <div class="new_text">
+      <input type="button" id="new_txt" onclick="new_text('new');this.blur()" value="Nouveau texte"/> <input type="button" id="same_txt" onclick="new_text('');this.blur()" value="Recommencer ce texte"/>
+      <p style="float:right">
+        <span id="d_replay">
+        Lecteur <input type="button" style="width:60px" id="replay" onclick="replay()" value="Play"/>
+        <input type="button" style="width:60px" onclick="replay('stop')" value="Stop"/>
+            <select id="speed_replay" onChange="vitesse=this.value;this.blur()" style="width:inherit">
+            <!--select id="speed_replay" style="width:inherit"-->
+              <option value="1">×1 </option>
+              <option value="2">×2 </option>
+              <option value="3">×3 </option>
+              <option value="4">×4 </option>
+            </select></span><br/><br/>
+         <input type="button" onclick="load_ghost('list')" value="Liste des fantômes pour ce texte"/>
+      </p>
+      <br/>
+       Méthode&nbsp;: <select id="methode" onChange="this.blur()">
+        <option value="rand">aléatoire </option>
+        <option value="number">sélection </option>
+      </select>
+      <br/>
+       Langue&nbsp;&nbsp;: <select id="lang" onChange="this.blur()">
+        <option value="fr">français </option>
+        <option value="en">anglais </option>
+      </select>
+      <br/>
+      <hr/>
+    </div>
+    <div class="options">
+      <input type="button" onclick="this.value=view_options()" value="Afficher les options"/>
+      <div class="view_options" id="view_options">
+        <p id="options">
+          <input type="checkbox" onclick="options()" id="apo_typ" /> apostrophe typographique<br/>
+          <input type="checkbox" onclick="options()" id="maj_acc" /> majuscules accentuées<br/>
+          <input type="checkbox" onclick="options()" id="ligat" /> ligatures (æ, œ)<br/>
+          <input type="checkbox" onclick="options()" id="pds" /> points de suspension « … »<br/>
+          <input type="checkbox" onclick="options()" id="cadratin" /> tiret cadratin<br/>
+          <input type="checkbox" onclick="options()" id="no_brk_spc" /> espaces insécables<br/>
+          
+          &nbsp;&nbsp;&nbsp;<input type="checkbox" onclick="options()" id="no_brk_spc_display"/> les rendre visibles <br/>
+          
+          <input type="checkbox" onclick="options()" id="quote_fr" /> guillemets français « »<br/>
+        </p>
+      <br/>
+		<input type="button" value="Enregister les options" onclick="save_opt();this.blur()"/>
+        <!--p>
+          <input type="checkbox" id="short_aff" /> Afficher les résultats en ligne
+        </p-->
+		</div>
+		<hr/>
+                <!--
+		<input type="checkbox" id="ghost_actif" /> activer le fantôme <span id="demo_ghost" onclick="var c=prompt('nouvelle couleur du curseur (hexa)',cur_col_ghost);cur_col_ghost=c;this.style.backgroundColor=c;curseur()">&nbsp;</span><br/>
+		<input type="checkbox" id="curseur_actif" checked="checked" /> activer le curseur <span id="demo_curseur" onclick="var c=prompt('nouvelle couleur du curseur (hexa)',cur_col);cur_col=c;this.style.backgroundColor=c;curseur()">&nbsp;</span><br/>
+		-->
+
+		<input type="checkbox" id="ghost_actif" /> activer le fantôme <input id="demo_ghost" style="width:8px;border:none" class="color {valueElement:'gh_cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="gh_cur_col" value="#ffd7ff" onchange="cur_col_ghost=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()"/><br/>
+		<input type="checkbox" id="curseur_actif" checked="checked" /> activer le curseur <input id="demo_curseur" style="width:8px;border:none" class="color {valueElement:'cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="cur_col" value="#ffd700" onchange="cur_col=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()" /><br/>
+
+
+                <p style="margin-top:30px">
+			<a href="http://bepo.fr"><img src="http://bepo.fr/wiki/skins/bepo/bepo-powered.png" alt="bepo.fr" title="Ce test a été intégralement écrit en BÉPO !" /></a>
+			<a href="http://www.lecturel.com/clavier/mots-par-minute.php"><img src="img/lecturel.png" alt="lecturel.com" title="Ce test est inspriré de celui du site www.lecturel.com" /></a>
+		</p>
+    </div>
+    <div id="resultats" class="result"></div>
+  </div>
+</div>
+
+<div style="display:none"><img src="img/indicator.gif" alt="c'est juste histoire qu'il soit chargé" /></div>
+
+<div id="fireworks-template">
+ <div id="fw" class="firework"></div>
+ <div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div>
+</div>
+<div id="fireContainer"></div>
+
+<script type="text/javascript" src="js/start.js"></script>
+
+</body>
+</html>
+					

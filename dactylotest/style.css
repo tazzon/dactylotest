@@ -1,0 +1,162 @@
+body {
+  background-color:#fafafa;
+  color: black;
+  font-size: 14px;
+  font-family:monospace;
+  margin:0px;
+}
+
+.bar {
+  background-color:black;
+  /*z-index:150;*/
+  width:99%;
+  /*border:1px black dotted;*/
+  padding:3px;
+  margin:auto;
+}
+
+.main a {
+  color:#003399;
+  text-decoration:none;
+}
+
+.main a:visited {
+  color:#003399;
+  text-decoration:none;
+}
+
+.text_nmbr a {
+  color:#003399;
+  text-decoration:none;
+}
+
+.text_nmbr a:visited {
+  color:#003399;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+.bar a,a:visited {
+  margin:10px;
+  text-decoration:none;
+  color:#fafafa;
+}
+
+.bar a:hover {
+  color:#ffd700; 
+}
+
+h1 {
+  text-align:center
+}
+p {
+  margin:0;
+  padding:0px 0px 0px 0px;
+}
+input[type=button] {
+  border:1px black solid;
+  background-color:#ebebeb;
+  font-size: 12px; 
+  color: black; 
+  font-family: monospace;
+  margin-bottom:3px;
+  -moz-border-radius: 5px;
+  border-radius:5px; 
+}
+.full_width {
+  width:100%;
+  text-align:center;
+}
+input[type=button]:hover {
+  background-color:#fafafa;
+}
+input[type=text] {
+  font-size: 14px; 
+  color: black; 
+  font-family: monospace; 
+}
+hr {
+  border-top : dotted 1px black;
+  border-bottom : none;
+  border-left:none;
+  border-right:none;
+}
+select {
+  border:none;
+  font-family:monospace;
+  font-size:14px;
+  background-color:#fafafa;
+  width:100px;
+}
+img {
+  vertical-align:middle;
+}
+.main {
+  text-align:center;
+  width:750px;
+  margin:auto;
+}
+.text_nmbr {
+  width:100%;
+  border:none;
+  text-align:center;
+}
+.err {
+  visibility:hidden;
+  color:red;
+  font-weight:bold;
+  font-size:18px;
+  background-color:#ffbbbb;
+}
+.new_text {
+  border:none;
+  text-align:left;
+  padding:5px;
+  font-family:monospace;
+  font-size:14px;
+}
+.options {
+  border:none;
+  text-align:left;
+  width:270px;
+  float:left;
+  padding:0px 5px 5px 5px;
+
+  font-family:monospace;
+  font-size:14px;
+}
+.view_options {
+  display:block;
+}
+.result {
+  float:right;
+  text-align:left;
+  width:450px;
+  padding:5px;
+  font-family:monospace;
+  font-size:14px;
+}
+.txt {
+  border:1px black solid;
+  width:748px;
+  height:120px;
+  font-family:monospace;
+  font-size:14px;
+  margin-bottom:5px;
+}
+.rd_txt {
+  height:auto;
+  text-align:left;
+  width:748px;
+  height:125px;
+  font-family:monospace;
+  font-size:14px;
+  /*text-align:justify;*/
+  /*background-color:white;*/
+}
+
+.d_replay {
+  visibility:visible;
+  float:right;
+}
