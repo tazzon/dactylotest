@@ -48,7 +48,7 @@ function test(e)
   var TextErr = false;
   var CompText = (val != le_texte.substr(0,val.length));
 
-  if (OSName == "MacOs")
+  if (OSName == "MacOS")
   {
     var MacOsTest = (val.substr(0,val.length).substr(-1,1) != le_texte_macosmod.substr(0,val.length).substr(-1,1));
     var CompLettreText = (val.substr(0,val.length).substr(-1,1) == le_texte.substr(0,val.length).substr(-1,1));
