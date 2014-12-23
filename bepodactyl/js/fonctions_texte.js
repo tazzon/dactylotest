@@ -260,7 +260,7 @@ function aff_result() // replacer les undefined par des espaces insécables (pou
 {
   var txt="";
   if(nb_err > 5)
-    txt = " Il semblait que vous maîtrisiez pas encore totalement cette exercice, vous pouvez le recommencer si vous le souhaitez."; 
+    txt = " Il semblerait que vous ne maîtrisez pas encore totalement cet exercice, vous pouvez le recommencer si vous le souhaitez."; 
 
 	if (nb_err == 0)
     document.getElementById("resultats").innerHTML = "Félicitations ! Vous n'avez fait aucune erreur !";	  
