@@ -6,3 +6,4 @@ document.getElementById("rd_txt").innerHTML = ""; // effacement du message javas
 new_text();
 document.getElementById("val_curseur").checked = cur_checked;
 aff_kb(true);
+chronometre();

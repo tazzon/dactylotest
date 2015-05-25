@@ -1,5 +1,5 @@
 /*******************************************************************************
-Toutes les fonctions liées à la page pour le gestion des cadres des options, 
+Toutes les fonctions liées à la page pour le gestion des cadres des options,
 demande d'un nouveau texte…
 *******************************************************************************/
 
@@ -15,6 +15,7 @@ var vies = 2;
 
 function change_exo(a)
 {
+  date_actuelle = new Date();
   if (a=="+" && exo_en_cours<exo.length-1)
     exo_en_cours++;
   else if (a=="-" && exo_en_cours>0)
@@ -25,7 +26,7 @@ function change_exo(a)
 
 
 function new_text(a)
-{ 
+{
 	//on réinitialise les variables
 	le_texte = new Array;
 	recommencer = false;
@@ -39,9 +40,9 @@ function new_text(a)
 	exo_en_cours = a;  // permet de connaître globalement sur quel exo on se trouve
 
 	var reg = new RegExp("###","g");
-	
+
 	le_texte = exo[a].split(reg);
-	
+
 	document.getElementById("resultats").innerHTML = "";	// efface la zone de résulats
 	document.getElementById("txt").value = "";		// efface le texte frappé																//on efface le texte précédement tapé
 	document.getElementById("txt").focus();			// donne le focus à la zone de frappe
@@ -49,7 +50,7 @@ function new_text(a)
 
 	document.getElementById("exo_nb").innerHTML  = (a+1) +" : "+titre[a];	// affiche le numéro de l'exo (+1 pour faire joli) et le titre de l'exercice
 
-	//vies = 2;	
+	//vies = 2;
 	if (mode_jeu)
 		document.getElementById("nb_vies").innerHTML = make_heart();
 	else
@@ -57,9 +58,9 @@ function new_text(a)
 
 
 	ligne_suivante();
-	
+
 	// ce qui suit permet de griser les boutons [-] et [+]
-	document.getElementById("but_+").style.color = "inherit"; 
+	document.getElementById("but_+").style.color = "inherit";
 	document.getElementById("but_+").style.borderColor = "inherit";
 	document.getElementById("but_-").style.color = "inherit";
 	document.getElementById("but_-").style.borderColor = "inherit";
@@ -74,7 +75,7 @@ function new_text(a)
 		document.getElementById("but_+").style.color = "grey";
 		document.getElementById("but_+").style.borderColor = "grey";
 	}
-	
+
 	color_key(); // colorisation des touches du clavier
 
 }
@@ -84,12 +85,12 @@ function view_options(action)
 
 if (action == "")
   return;
-  
+
 document.getElementById("options").style.display = action;
 document.getElementById("voile").style.display = action;
 
 if (action == "block")
-  document.getElementById("txt").blur(); 
+  document.getElementById("txt").blur();
 if (action == "none")
   document.getElementById("txt").focus();
 
@@ -100,12 +101,12 @@ function view_help(action)
 
 if (action == "")
   return;
-  
+
 document.getElementById("help").style.display = action;
 document.getElementById("voile").style.display = action;
 
 if (action == "block")
-  document.getElementById("txt").blur(); 
+  document.getElementById("txt").blur();
 if (action == "none")
   document.getElementById("txt").focus();
 
@@ -131,7 +132,7 @@ function make_heart()
 	/*for (var i=0 ; i<vies ; i++)
 	{
 		nb_vies+=coeur;
-	}*/	
+	}*/
 	return vies+' <span style="color:red">'+coeur+'</span>';
 }
 
@@ -171,7 +172,7 @@ function type_clavier(a)
 	//document.getElementById("aff_kb").innerHTML=kb_decal();
 	//document.getElementById("aff_kb").innerHTML='<img src="bepo-standard.png" alt="clavier bépo" />';
 
-        
+
 	color_key();
 
 
@@ -196,10 +197,10 @@ function get_key(e,action)
 	{
 		if (touche== 16) //shift
 			shift_down = false;
-		if (touche == 17 || touche == 225) //altgr 
+		if (touche == 17 || touche == 225) //altgr
 			altgr_down = false;
 	}
-	
+
 	if (shift_down == true && altgr_down == true)
 		layout = bepo_4;
 	if (shift_down == true && altgr_down == false)
@@ -240,21 +241,21 @@ function color_key()
 	  if (document.getElementById("k"+key))
 	  {
                 a = document.getElementById("k"+key).innerHTML;
-  
+
   		for (var lettre = 0 ; lettre < exo_pre.length ; lettre++)
   		{
   			b = exo_pre.charAt(lettre);
   			//alert(key+" _" +a+"_ _"+b+"_");
-  			
+
   			if ( a == b && document.getElementById("k"+key) )
   				document.getElementById("k"+key).style.backgroundColor = "#c1f7ad";
   		}
-  		
+
   		for (var lettre = 0 ; lettre < lettres[exo_en_cours].length ; lettre++)
   		{
   			b = lettres[exo_en_cours].charAt(lettre);
   			//alert(key+" _" +a+"_ _"+b+"_");
-  			
+
   			if ( a == b && document.getElementById("k"+key) )
   				document.getElementById("k"+key).style.backgroundColor = "#7cfc00";
   		}
@@ -304,7 +305,7 @@ function kb_decal()
 		kb += '<div style="clear:both"></div>';
 	}
 	kb += '</div>';
-	
+
 	return kb;
 }
 
@@ -322,11 +323,11 @@ function kb_typematrix()
 	{
 		for(var j = 0 ; j < key_per_row[i] ; j++)
 		{
- 
+
 
 			if(k == 48)
 			  k=36;
-			  
+
                         if(j == 0)
 				kb += '<div style="margin-left:'+row_dec[i]+'px" class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
 			else if(j == key_space[i])
@@ -336,18 +337,16 @@ function kb_typematrix()
 			k++;
  			if(k == 36)
 			  k=38;
-       
 
-			
 
-			  
+
+
+
 		}
 		kb += '<div style="clear:both"></div>';
                 //k=48; // pour avoir le nombre total de touche
 	}
 	kb += '</div>';
-	
+
 	return kb;
 }
-
-		

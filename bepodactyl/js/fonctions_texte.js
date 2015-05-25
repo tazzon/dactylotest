@@ -10,8 +10,8 @@ var txt_frap = new Array; // on stock dans ce tableau les différentes lignes de
 var recommencer = false;
 var nb_err = 0;
 var nb_recom = 0; // nombre de fois qu'on a recommencé la ligne
-var nb_tentatives_recom = 3 // nombre de tentatives par ligne avant de passer à la suivante et de repasser la ligne manquée à la fin de l'exercice
-
+var nb_tentatives_recom = 3; // nombre de tentatives par ligne avant de passer à la suivante et de repasser la ligne manquée à la fin de l'exercice
+var date_actuelle = new Date();
 
 function test(e)
 {
@@ -32,7 +32,7 @@ function test(e)
   }
 
 
-    
+
 	val = document.getElementById("txt").value;                                   //le texte qu'on tape
   if (val.substr(val.length-1,1) != le_texte[l-1].substr(val.length-1,1) && val.length-1 != le_texte[l-1].length && val.length != 0)
   {
@@ -55,8 +55,8 @@ function test(e)
 		val_temp="";
 		return;
 	}
-	color_car();	
-	
+	color_car();
+
 	val_temp=val;
 }
 
@@ -74,7 +74,7 @@ function live_var()
 {
 	var content = "";
 	content = "l="+l+" ; recommencer="+recommencer+" ; nb_recom="+nb_recom+"<br/>";
-	content += "le_texte.length="+le_texte.length+"<br/>"; 
+	content += "le_texte.length="+le_texte.length+"<br/>";
 
 	for (var i=0 ; i < le_texte.length ; i++)
 		content += le_texte[i]+"<br/>";
@@ -87,7 +87,7 @@ nbspace = true;
 function nbsp_mode()
 {
     if (nbspace == false)
-    {  
+    {
         return le_texte.replace("/ /"," ");
     }
 }
@@ -150,14 +150,14 @@ function ligne_suivante(reload)
 		aff_result();
 	}
 	else
-	{	
+	{
 		var col_ligne = new Array("inherit","#bbbbbb","#d4d4d4","#eeeeee");
 		var mark_ligne = new Array(">> ","   ","   ","   ");
    		var txt="";
 		document.getElementById("rd_txt").innerHTML = "";
-	
+
 		var ligne_tab = new Array();
-	
+
 		for (var i=0 ; i<4 ; i++)
 		{
 			if (l+i < le_texte.length)// il faut qu'il reste des lignes
@@ -167,7 +167,7 @@ function ligne_suivante(reload)
 	  				//on découpe le tout pour le reconstituer ensuite avec des span identifiant chaque mot (pour le curseur)
 					var reg = new RegExp("","g");
 					var ligne_tmp = le_texte[l+i].split(reg);
-					
+
 					for (var j=0 ; j<ligne_tmp.length ; j++)
 					{
 					  if (ligne_tmp[j] == " ") // si c'est une espace insécable
@@ -178,12 +178,12 @@ function ligne_suivante(reload)
                                               ligne_tmp[j] = '<span id="car_'+j+'"> </span>';
                                           }
 
-                                          else 
+                                          else
 				            ligne_tmp[j] = '<span id="car_'+j+'">'+ligne_tmp[j]+'</span>';
 					}
 
 					txt=ligne_tmp.join("")+'<span id="car_'+j+'"> </span>';
-					//alert(txt);  
+					//alert(txt);
 				}
 				else
 				{
@@ -196,10 +196,10 @@ function ligne_suivante(reload)
 		l++;
 	}
 	document.getElementById("rd_txt").innerHTML = ligne_tab.join("");
-	
+
 
 	recommencer = false;
-	color_car("init");	
+	color_car("init");
 	//live_var();
 
 	//document.getElementById("resultats").innerHTML = "l="+l+"<br/>"+le_texte[l-1];
@@ -226,10 +226,10 @@ var anti_correct = false;
 function val_anti_correct(a)
 {
 
-  anti_correct = false;
+  anti_correct = true;
   if (a == true || a == "init")
     anti_correct = true;
-    
+
 
   if (anti_correct)
     document.getElementById("anti_correct").checked = "checked";
@@ -241,7 +241,7 @@ var colw = 0;
 var col_cur = la_couleur_du_curseur; // couleur du curseur
 function color_car(a)
 {
-  
+
   if (a == "init")
 	colw = 0;
   else
@@ -260,24 +260,29 @@ function aff_result() // replacer les undefined par des espaces insécables (pou
 {
   var txt="";
   if(nb_err > 5)
-    txt = " Il semblerait que vous ne maîtrisez pas encore totalement cet exercice, vous pouvez le recommencer si vous le souhaitez."; 
+    txt = " Il semblerait que vous ne maîtrisez pas encore totalement cet exercice, vous pouvez le recommencer si vous le souhaitez.";
 
 	if (nb_err == 0)
-    document.getElementById("resultats").innerHTML = "Félicitations ! Vous n'avez fait aucune erreur !";	  
+    document.getElementById("resultats").innerHTML = "Félicitations ! Vous n'avez fait aucune erreur ! En "+compteur_temps+"seconde ! ";
   else if (nb_err < 2)
-    document.getElementById("resultats").innerHTML = "Vous avez fait "+nb_err+" erreur.";
+    document.getElementById("resultats").innerHTML = "Vous avez fait "+nb_err+" erreur. En "+compteur_temps+"seconde ! ";
 	else
-    document.getElementById("resultats").innerHTML = "Vous avez fait "+nb_err+" erreurs."+txt;	
+    document.getElementById("resultats").innerHTML = "Vous avez fait "+nb_err+" erreurs. En "+compteur_temps+"seconde ! "+txt;
 	document.getElementById("rd_txt").innerHTML = "";
 
 	nb_err = 0;
 	txt_frap = new Array();    // ré-init variable
 }
 
+function chronometre() //
+{
+  var clock="&#8987; ";
+	var chronometre = document.getElementById("chronometre");
+	var date_evenement = new Date();
+	var total_secondes = (date_evenement - date_actuelle) / 1000;
+    minutes = Math.floor(total_secondes / 60);
+		secondes = Math.floor(total_secondes - minutes * 60);
 
-
-
-
-
-
-
+		chronometre.innerHTML = minutes+ ' min '+secondes +'s <span style="color:black;font-size: .6em;">'+clock+'</span>';
+	var actualisation = setTimeout("chronometre();", 1000);
+}

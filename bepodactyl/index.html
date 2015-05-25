@@ -30,16 +30,16 @@
 		<input type="button" id="but_+" onclick="change_exo('+')" value="+"/>
 		<input type="button" id="but_+" onclick="change_exo('=')" value="Recommencer"/>
 		<input type="button" onClick="view_options('block')" value="Options" />
-		<input type="button" onClick="view_help('block')" value="?" />		
+		<input type="button" onClick="view_help('block')" value="?" />
 	 </p>
 	<br/>
-       
+
 	<div id="aff_kb"></div>
 
 
 	<hr/>
-	<div style="width:100%"><strong style="float:left;width:65%">Exercice nº<span id="exo_nb"></span></strong><span id="nb_vies" style="float:left;text-align:right;width:20%"></span></div>
-	<br/><br/>	
+	<div style="width:100%"><strong style="float:left;width:65%">Exercice nº<span id="exo_nb"></span></strong><span id="nb_vies" style="float:left;text-align:right;width:20%"></span><span style="float:left;text-align:right;width:15%" id="chronometre"></span></div>
+	<br/><br/>
 	<div class="ici" id="ici">
 		<p class="rd_txt" id="rd_txt"><span style="color:red"><strong>Javascript doit être activé ! Vous pouvez le faire en modifiant les préférences de votre navigateur. Si vous ne savez pas comment faire, consultez l'aide de celui-ci.</strong></span></p>
 		<p>>> <input type="text" onkeyup="test(event)" onkeydown="" id="txt" class="txt"/></p>
@@ -56,7 +56,7 @@
   <p style="margin-bottom:10px"><strong>Options</strong><p>
   <p>
     <!--input type="checkbox" id="val_kb" checked="checked" onChange="aff_kb(this.checked)" /> Afficher l’image du clavier<br/-->
-    
+
     Image du clavier<br/>
     <input type="radio" name="type_kb" id="type_kb" checked="checked" value="kb_decal"       onChange="type_kb=this.value;aff_kb(true)"  /> Clavier décalé<br/>
     <input type="radio" name="type_kb" id="type_kb"                   value="kb_typematrix"  onChange="type_kb=this.value;aff_kb(true)"  /> Typematrix<br/>
@@ -66,7 +66,7 @@
     <br/>
     <input type="checkbox" id="val_jeu" onChange="modejeu(this.checked)" /> Mode jeu<br/>
     <!--input type="checkbox" id="val_nbsp" checked="checked" onChange="nbspace=this.checked;ligne_suivante(true)" /> Utiliser les espaces insécables<br/-->
-    <!--input type="checkbox" id="anti_correct" onChange="val_anti_correct(this.checked)" /> Activer l’anti-correction<br/-->
+    <input type="checkbox" id="anti_correct" onChange="val_anti_correct(this.checked)" /> Activer l’anti-correction<br/>
   </p>
   <p style="text-align:right;margin-top:10px">
     <!--input type="button" onclick="valide_options()" value="Valider"/-->
@@ -92,8 +92,5 @@
 
 <script type="text/javascript" src="js/start.js"></script>
 
-
-
 </body>
 </html>
-	
