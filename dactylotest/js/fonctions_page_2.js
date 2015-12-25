@@ -128,6 +128,19 @@ function options()
     le_texte = le_texte.replace(/ /g," ");
   }
   
+  //espaces insécables et pas d’espaces insécables fines
+  if (document.getElementById("no_brk_spc").checked == true &&
+  document.getElementById("no_narrowbrk_spc").checked == false)
+  {
+    le_texte = le_texte.replace(/ /g," ");
+  }
+
+  //espaces fines insécables
+  if (document.getElementById("no_narrowbrk_spc").checked == false)
+  {
+    le_texte = le_texte.replace(/ /g," ");
+  }
+
   //points de suspension
   if (document.getElementById("pds").checked == false)
     le_texte = le_texte.replace(/…/g,'...');
@@ -148,10 +161,17 @@ function options()
   // on ajoute les espaces incécables en même temps qu'on englobe chaque caractères dans un span pour le curseur
   for (var i=0 ; i<le_texte.length ; i++)
   {
-    if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ")
+    if ((document.getElementById("no_brk_spc_display").checked == true &&
+	tt[i] == " ") ||
+	(document.getElementById("no_narrowbrk_spc_display").checked == true &&
+	tt[i] == " "))
+    {
       tt[i] = '<span style="background-color:#cccccc"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
+    }
     else
+    {
       tt[i] = '<span id="car'+(i+1)+'">'+tt[i]+'</span>';
+    }
   }
 
   // et on met tout le texte dans la zone de lecture en recolant le tout
