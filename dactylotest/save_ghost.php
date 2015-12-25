@@ -34,7 +34,9 @@ function random($car)
 function options()
 {
     // tableau des différents cookies à tester
-    $cookie_tab = array("apo_typ","maj_acc","ligat","pds","no_brk_spc","no_brk_spc_display","quote_fr","cadratin");
+    $cookie_tab = array("apo_typ", "maj_acc", "ligat", "pds", "no_brk_spc",
+			"no_brk_spc_display", "no_narrowbrk_spc",
+			"no_narrowbrk_spc_display", "quote_fr", "cadratin");
     
     $opt = "";
     
