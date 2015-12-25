@@ -19,9 +19,17 @@ if (GetCookie("no_brk_spc") == "true")
   document.getElementById("no_brk_spc").checked = true;
   //document.getElementById("nbspd").style.display = "block";
 }
+if (GetCookie("no_narrowbrk_spc") == "true")
+{
+  document.getElementById("no_narrowbrk_spc").checked = true;
+}
 //else
 //  document.getElementById("nbspd").style.display = "none";
 if (GetCookie("no_brk_spc_display") == "true") document.getElementById("no_brk_spc_display").checked = true;
+if (GetCookie("no_narrowbrk_spc_display") == "true")
+{
+  document.getElementById("no_narrowbrk_spc_display").checked = true;
+}
 if (GetCookie("quote_fr") == "true") document.getElementById("quote_fr").checked = true;
 if (GetCookie("name") != null) document.getElementById("welcome").innerHTML = "Bienvenue "+GetCookie("name");
 

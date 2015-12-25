@@ -106,6 +106,12 @@ function options()
     le_texte = le_texte.replace(/ /g," ");
   }
   
+  //espaces fines insécables
+  if (document.getElementById("no_narrowbrk_spc").checked == false)
+  {
+    le_texte = le_texte.replace(/ /g," ");
+  }
+
   //points de suspension
   if (document.getElementById("pds").checked == false)
     le_texte = le_texte.replace(/…/g,'...');
