@@ -12,6 +12,33 @@
 
 <body onkeydown="get_key(event,'down')" onkeyup="get_key(event,'up')">
 
+<!-- DEBUT raccourci clavier -  Trouvé ici https://blog.lesieur.name/comment-gerer-les-raccourcis-clavier-en-javascript/#avec-jquery -->
+<script>
+var keys = {};
+
+function trackMultipleKeyStroke (e) {
+	    e = e || event;
+	    keys[e.keyCode] = e.type === 'keydown';
+
+	    if (keys[27]/* && keys[46]*/) {
+			change_exo('+'); }
+		if (keys[8]/* && keys[46]*/) {
+			change_exo('-'); }
+}
+
+function addEvent(element, event, func) {
+	    if (element.attachEvent) {
+		    return element.attachEvent('on' + event, func);
+	    } else {
+		    return element.addEventListener(event, func, false);
+	    }
+}
+
+addEvent(window, "keydown", trackMultipleKeyStroke);
+addEvent(window, "keyup", trackMultipleKeyStroke);
+</script>
+<!-- FIN raccourci clavier -->
+
 <div class="bar" id="bar">
   <a href="http://tazzon.free.fr/dactylotest/"><img src="../home.png" alt="home" style="padding-bottom:2px"/></a>
   <a href="../dactylotest/" title="Testez votre vitesse de frappe">Dactylotest</a>
