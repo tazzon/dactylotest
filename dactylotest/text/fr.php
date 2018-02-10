@@ -3,7 +3,7 @@
 Les textes doivent comporter :
 — les apostrophes typographique (’ et non '),
 — les ligatures æ, Æ, œ et Œ,
-— les espaces insécables là ou ils sont nécessaire,
+— les espaces insécables là ou elles sont nécessaires,
 — les majuscules accentuées.
 */  
 
