@@ -4,8 +4,8 @@ La fonction pour les requêtes serveur.
 
 
 //cette fonction permet de faire les requêtes serveur
-//get = la requete
-//id = le champ ou inscrire l'état de la requete
+//get = la requête
+//id = le champ où inscrire l'état de la requête
 function request(get,id)
 {
 	var req = null; 
@@ -30,5 +30,5 @@ function request(get,id)
 	req.open("GET", get, false);  // requète non synchronisée sinon on ne peut pas avoir la valeur de la réponse
 	req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
 	req.send(null);
-	return req.responseText;  //retourne le résultat de la requete
+	return req.responseText;  //retourne le résultat de la requête
 }
