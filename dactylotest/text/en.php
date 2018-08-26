@@ -47,5 +47,5 @@ $textes[11]["txt"] = "Language documentation combines anthropological inquiry (i
 $textes[11]["source"] = "http://en.wikipedia.org/wiki/Linguistics";
 
 $textes[12]["txt"] = "While code-switching, a situation in which a speaker alternates between two or more languages, or language varieties, in the context of a single conversation, is not the only form of linguistic variability to carry a social, or referential meaning, it does provide a particularly clear approach to understanding the relationship between social processes and linguistic forms, because both the social and the linguistic boundaries in question tend to be most evident than in other monolingual settings. In anthropological linguistics…";
-$textes[12]["source"] = "https://en.wikipedia.org/wiki/Anthropological_linguistics#Methodology";
+$textes[12]["source"] = "http://en.wikipedia.org/wiki/Anthropological_linguistics#Methodology";
 ?>
