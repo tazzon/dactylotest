@@ -42,7 +42,7 @@ exo[4]="Nous nous disputons pour des prunes###Un papa panda divin parade au para
 titre[5]="É et L (annulaires)";
 lettres[5]="élÉL";
 conseil[5]=0;
-exo[5]="Ils étaient pourtant anéantis###Le ré et le la ont été entendus###Il a idéalisé son idole antirévolutionnaire###Un oiseau a des ailes et en réalité les avions aussi###Une eau désaltérante est la plus utile durant un été étoilé###Les dépolluants ont évolué et peuvent délivrer une eau saine###Nous avons pu altérer les évolutions prévues de notre Étoile en étain###Le député et le président ont été élus suite au vote sans surprise de la droite###Alerté par la radio un adulte daltonien a pu délivrer le latéral droit de Lens###Une révolutionnaire esseulée est délaissée par les prisonniers dépassés par les événements";
+exo[5]="Ils étaient pourtant anéantis###Le ré et le la ont été entendus###Il a idéalisé son idole antirévolutionnaire###Un oiseau a des ailes et en réalité les avions aussi###Une eau désaltérante est la plus utile durant un été étoilé###Les dépolluants ont évolué et peuvent délivrer une eau saine###Nous avons pu altérer les évolutions prévues de notre Étoile en étain###Le député et le président ont été élus suite au vote sans surprise de la droite###Alerté par la radio un adulte daltonien a pu délivrer le latéral droit de Lens###Une révolutionnaire esseulée est délaissée par les prisonniers dépassés par la situation";
 
 titre[6]="B et J (auriculaires), C (index droit)";
 lettres[6]="bjBJcC";
