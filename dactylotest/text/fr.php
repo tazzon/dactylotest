@@ -5,7 +5,7 @@ Les textes doivent comporter :
 — les ligatures æ, Æ, œ et Œ,
 — les espaces insécables là ou ils sont nécessaire,
 — les majuscules accentuées.
-*/  
+*/
 
 //$textes[0]["txt"] = "";
 //$textes[0]["source"] = "";
@@ -270,11 +270,15 @@ $textes[128]["source"] = "http://fr.wikisource.org/wiki/Candide,_ou_l’Optimism
 $textes[128]["txt"] = "Il y avait en Westphalie, dans le château de monsieur le baron de Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les mœurs les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on le nommait Candide. Les anciens domestiques de la maison soupçonnaient qu’il était fils de la sœur de monsieur le baron et d’un bon et honnête gentilhomme du voisinage, que cette demoiselle ne voulut jamais épouser parce qu’il n’avait…";
 $textes[129]["source"] = "http://fr.wikisource.org/wiki/Convention_des_droits_de_l’enfant";
 $textes[129]["txt"] = "Les États parties s’engagent à respecter les droits qui sont énoncés dans la présente Convention et à les garantir à tout enfant relevant de leur juridiction, sans distinction aucune, indépendamment de toute considération de race, de couleur, de sexe, de langue, de religion, d’opinion politique ou autre de l’enfant ou de ses parents ou représentants légaux, de leur origine nationale, ethnique ou sociale, de leur situation de fortune, de leur incapacité, de leur naissance ou de toute autre situation.";
-
 $textes[130]["txt"] = "L’obstacle moral, c’est l’inquiétude que la France éveille en Europe. La France en effet, pour le monde entier, c’est la pensée, c’est l’intelligence, la publicité, le livre, la presse, la tribune, la parole ; c’est la langue, la pire des choses, dit Ésope : – la meilleure aussi. Pour apprécier quelle est l’influence de la France dans l’atmosphère continentale et quelle lumière et quelle chaleur elle y répand, il suffit de comparer à l’Europe d’il y a deux cents ans, dont nous avons crayonné le tableau en…";
 $textes[130]["source"] = "http://fr.wikisource.org/wiki/Le_Rhin/Conclusion/XV";
-
 $textes[131]["txt"] = "Posez vos doigts sur la « rangée de repos ». Vous sentez les picots sous vos index ? Bien. Vos doigts sont bien placés. À l’aide d’un « pense-bête » téléchargé et imprimé, aidez-vous pour trouver les nouveaux emplacements de vos touches. Le mot clef pour les exercices est « patience ». Prenez votre temps, visez l’efficacité plutôt que la vitesse. La vitesse, vous l’acquerrez avec le temps. Pour le moment, laissez juste chacun de vos doigts découvrir son nouveau domaine, ses nouvelles touches. Soyez patients et réguliers dans vos exercices et la vitesse viendra d’elle-même, comme une récompense.";
 $textes[131]["source"] = "";
 
+$textes[132]["txt"] = "Quoique ce détail ne touche en aucune manière au fond même de ce que nous avons à raconter, il n’est peut-être pas inutile, ne fût-ce que pour être exact en tout, d’indiquer ici les bruits et les propos qui avaient couru sur son compte au moment où il était arrivé dans le diocèse. Vrai ou faux, ce qu’on dit des hommes tient souvent autant de place dans leur vie et souvent dans leur destinée que ce qu’ils font. M. Myriel était fils d’un conseiller au parlement d’Aix ; noblesse de robe. On contait que son père…";
+$textes[132]["source"] = "https://fr.wikisource.org/wiki/Les_Mis%C3%A9rables/Tome_1/Livre_1/01";
+$textes[133]["txt"] = "Ce n’est cependant pas un jour dont l’histoire ait gardé souvenir que le 6 janvier 1482. Rien de notable dans l’événement qui mettait ainsi en branle, dès le matin, les cloches et les bourgeois de Paris. Ce n’était ni un assaut de picards ou de bourguignons, ni une châsse menée en procession, ni une révolte d’écoliers dans la vigne de Laas, ni une entrée de notredit très redouté seigneur monsieur le roi, ni même une belle pendaison de larrons et de larronnesses à la Justice de Paris. Ce n’était pas non plus la survenue, si fréquente au quinzième siècle…";
+$textes[133]["source"] = "https://fr.wikisource.org/wiki/Notre-Dame_de_Paris/Livre_premier";
+$textes[134]["txt"] = "Mathieu, c'est mon fils. Il a 11 ans et aime bien le chocolat et Minecraf. Ce n’est cependant pas un jour dont l’histoire ait gardé souvenir que le 6 janvier 1482. Rien de notable dans l’événement qui mettait ainsi en branle, dès le matin, les cloches et les bourgeois de Paris. Ce n’était ni un assaut de picards ou de bourguignons, ni une châsse menée en procession, ni une révolte d’écoliers dans la vigne de Laas, ni une entrée de notredit très redouté seigneur monsieur le roi, ni même une belle pendaison de larrons et de larronnesses à la Justice de Paris. Ce n’était pas non plus la survenue, si fréquente au quinzième siècle…";
+$textes[134]["source"] = "Sorti de ma tête en mode impro";
 ?>
