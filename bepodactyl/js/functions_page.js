@@ -194,7 +194,7 @@ function get_key(e,action)
 	}
 	if(action == "up")
 	{
-		if (touche== 16) //shift
+		if (touche == 16 || touche == 0) //shift (bug chromium ? le up du shift retourne 0)
 			shift_down = false;
 		if (touche == 17 || touche == 225) //altgr 
 			altgr_down = false;
@@ -264,11 +264,11 @@ function color_key()
 }
 
 
-
-var bepo_1 = "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k'qghf";
+// BÉPO RC1.1
+var bepo_1 = "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k’qghf";
 var bepo_2 = "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
-var bepo_3 = "–—<>[]       | &œ ¡      æù¨€’        \\{}… ¿    ";
-var bepo_4 = " „“”≤≥        ˝ Œ        ÆÙ            ‘’·      ";
+var bepo_3 = "–—<>[]       | &œ ¡      æù¨€'       /\\{}… ¿    ";
+var bepo_4 = " „“”⩽⩾       _˝ Œ        ÆÙ          ^ ‘’·      ";
 
 /*
 var bepo_1 = "²&é\"'(-è_çà)=azertyuiop^$qsdfghjklmù*<wxcvbn,;:!";

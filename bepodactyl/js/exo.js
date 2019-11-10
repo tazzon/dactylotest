@@ -5,13 +5,13 @@ var conseils = new Array();
 var lettres = new Array();
 
 conseils[0]="";
-conseils[1]="Pour frapper les majuscules, utiliser l'auriculaire de la main opposée à celle qui tape la lettre. Ainsi, on doit utiliser l'auriculaire droit pour les majuscules AUIE et l'auriculaire gauche pour NRST.";
-conseils[2]="Pour le M et le Z, l'auriculaire droit doit s'étendre hors de sa colonne. La virgule et le É doivent être fait avec l’index gauche.";
-conseils[3]="Le K et le point se font avec la main gauche. L'apostrophe et le Q se font avec la main droite. L'apostrophe nécessite d'étirer un peu plus l'index. Attention à ne pas confondre les deux ! Le principe est toujours le même : la précision est bien plus importante que la rapidité.";
+conseils[1]="Pour frapper les majuscules, utiliser l’auriculaire de la main opposée à celle qui tape la lettre. Ainsi, on doit utiliser l’auriculaire droit pour les majuscules AUIE et l’auriculaire gauche pour NRST.";
+conseils[2]="Pour le M et le Z, l’auriculaire droit doit s’étendre hors de sa colonne. La virgule et le É doivent être fait avec l’index gauche.";
+conseils[3]="Le K et le point se font avec la main gauche. L’apostrophe et le Q se font avec la main droite. L’apostrophe nécessite d’étirer un peu plus l’index. Attention à ne pas confondre les deux ! Le principe est toujours le même : la précision est bien plus importante que la rapidité.";
 conseils[4]="Attention, c’est bien l’annulaire gauche qui doit être utilisé pour faire le « Y » !";
-conseils[5]="L'accent circonflexe (en dessous du point d'exclamation) et le tréma (en AltGr+I) doivent être tapés seuls. Vous ne verrez rien, mais l'accent apparaîtra sur la voyelle tapée ensuite. Un subtilité pour Ê, qui peut être obtenu de deux façons : par la 105ème touche du clavier Ê, ou avec l'accent circonflexe, puis le E.";
-conseils[6]="Une petite difficulté supplémentaire pour les deux points, le point-virgule, le point d'exclamation et le point d'interrogation qui doivent tous être précédés d'une espace insécable (représentée ici par « ␣ »), obtenue en maintenant la touche majuscule durant la frappe de l'espace. Conserver ensuite la touche majuscule appuyée pour la frappe du signe de ponctuation, qui est justement en majuscule lui-aussi. Ne pas oublier de relâcher avant la frappe de l'espace suivante.";
-conseils[7]="Une petite difficulté supplémentaire pour les guillemets ouverts qui doivent être suivis d'une espace insécable, ainsi que pour les guillemets fermés qui doivent être précédés d'une espace insécable, obtenue en maintenant la touche majuscule durant la frappe de l'espace.";
+conseils[5]="L’accent circonflexe (en dessous du point d’exclamation) et le tréma (en AltGr+I) doivent être tapés seuls. Vous ne verrez rien, mais l’accent apparaîtra sur la voyelle tapée ensuite. Un subtilité pour Ê, qui peut être obtenu de deux façons : par la 105ème touche du clavier Ê, ou avec l’accent circonflexe, puis le E.";
+conseils[6]="Une petite difficulté supplémentaire pour les deux points, le point-virgule, le point d’exclamation et le point d’interrogation qui doivent tous être précédés d’une espace insécable (représentée ici par « ␣ »), obtenue en maintenant la touche majuscule durant la frappe de l’espace. Conserver ensuite la touche majuscule appuyée pour la frappe du signe de ponctuation, qui est justement en majuscule lui-aussi. Ne pas oublier de relâcher avant la frappe de l’espace suivante.";
+conseils[7]="Une petite difficulté supplémentaire pour les guillemets ouverts qui doivent être suivis d’une espace insécable, ainsi que pour les guillemets fermés qui doivent être précédés d’une espace insécable, obtenue en maintenant la touche majuscule durant la frappe de l’espace.";
 conseils[8]="En guise de conclusion, voici des exercices où, à chaque ligne, on trouve toutes les lettres de l’alphabet : des pangrammes.";
 
 titre[0]="E, T, A, N (index et auriculaires)";
@@ -59,40 +59,40 @@ lettres[8]="çwÇW";
 conseil[8]=0;
 exo[8]="Les edelweiss poussent en altitude###Lawrence est un darwiniste convaincu###Le journaliste a interviewé le steward wallon###Avec une jupe en tweed et un sweat, je suis parée pour assister au spectacle de clowns###En ensemençant maintenant, nous aurons un beau jardin au printemps###La rançon demandée est désarçonnante###Il passait inaperçu et demeurait donc insoupçonnable###Nous vous avons aperçus puis reçus, comme ça, sans attendre###Le caleçon du maçon se coinça dans un escalier en colimaçon mal conçu, alors il menaça de poinçonner son remplaçant déçu###Elle a conçu un brownie tout simplement sublime###Dans ce western, les cavaliers sont souvent désarçonnés";
 
-titre[9]="K . ' et Q (index)";
-lettres[9]="kK.'qQ";
+titre[9]="K . ’ et Q (index)";
+lettres[9]="kK.’qQ";
 conseil[9]=3;
-exo[9]="J'ai la joie d'utiliser un point.###L'accueil d'une douzaine d'émirs est crucial.###Il s'est présenté tel quel.###Je joue tandis qu'il travaille.###L'aéronautique est souvent critiquée mais demeure un domaine de compétence.###Un enquiquineur de première classe.###Je viens d'acquérir un kiwi.###C'est anecdotique, mais l'acoustique de cette salle est remarquable.###Il a empaqueté son anorak et l'a embarqué pour Astrakan.###Après le cours de karaté, un bon cake te requinquera.###Le judoka qui est en kaki teste ton kaléidoscope.###Un cocktail suivra la kermesse. Les basketteurs seront présents, ainsi que les quelques rockeurs.###Après quelques vodkas, je serai partant pour un jerk et un rock endiablés.###J'ai acquis une belle aquarelle d'antiquaire, que je mettrai près de mon aquarium.###C'est dans la zone équatoriale que j'ai pu pratiquer l'équitation.###Cet ecclésiastique éloquent évoquait une escroquerie sans équivoque.###Je m'inquiète de ce qu'impliquent ces quatorze quatrains.";
+exo[9]="J’ai la joie d’utiliser un point.###L’accueil d’une douzaine d’émirs est crucial.###Il s’est présenté tel quel.###Je joue tandis qu’il travaille.###L’aéronautique est souvent critiquée mais demeure un domaine de compétence.###Un enquiquineur de première classe.###Je viens d’acquérir un kiwi.###C’est anecdotique, mais l’acoustique de cette salle est remarquable.###Il a empaqueté son anorak et l’a embarqué pour Astrakan.###Après le cours de karaté, un bon cake te requinquera.###Le judoka qui est en kaki teste ton kaléidoscope.###Un cocktail suivra la kermesse. Les basketteurs seront présents, ainsi que les quelques rockeurs.###Après quelques vodkas, je serai partant pour un jerk et un rock endiablés.###J’ai acquis une belle aquarelle d’antiquaire, que je mettrai près de mon aquarium.###C’est dans la zone équatoriale que j’ai pu pratiquer l’équitation.###Cet ecclésiastique éloquent évoquait une escroquerie sans équivoque.###Je m’inquiète de ce qu’impliquent ces quatorze quatrains.";
 
 titre[10]="X et G (majeurs)";
 lettres[10]="xgXG";
 conseil[10]=0;
-exo[10]="J'exagère sans doute, mais l'état de mon gazon s'aggrave.###Les Anglais s'agglutinent dans cette agglomération.###Lorsqu'elle angoisse, elle ingurgite et engloutit des quantités astronomiques.###Nous avons obtenu l'agrément pour l'agrandissement de notre maison et l'aménagement de l'annexe.###L'agence nous a conseillé l'agriculture, mais l'élevage de grenouilles pourrait nous nuire.###Le matin, on conseille un bon verre de jus d'orange ou de tout autre agrume.###La gourmandise n'aide pas pour maigrir.###J'enrage car l'enregistrement que j'avais programmé a raté.###Mon garçon est ambidextre.###Avec mes index et mes majeurs, j'indexe des données qui avaient été annexées.";
+exo[10]="J’exagère sans doute, mais l’état de mon gazon s’aggrave.###Les Anglais s’agglutinent dans cette agglomération.###Lorsqu’elle angoisse, elle ingurgite et engloutit des quantités astronomiques.###Nous avons obtenu l’agrément pour l’agrandissement de notre maison et l’aménagement de l’annexe.###L’agence nous a conseillé l’agriculture, mais l’élevage de grenouilles pourrait nous nuire.###Le matin, on conseille un bon verre de jus d’orange ou de tout autre agrume.###La gourmandise n’aide pas pour maigrir.###J’enrage car l’enregistrement que j’avais programmé a raté.###Mon garçon est ambidextre.###Avec mes index et mes majeurs, j’indexe des données qui avaient été annexées.";
 
 titre[11]="Y et H (annulaires)";
 lettres[11]="yhYH";
 conseil[11]=4;
-exo[11]="J'espère hypnotiser les sénateurs avec les chrysanthèmes disséminés dans l'hémicycle.###Les polytechniciens aussi ont besoin de s'hydrater.###C'est avec du rythme que le saxophoniste et le psychiatre joueur de synthé pourront se synchroniser.###Un asthmatique en crise présente une inspiration maximale qui abaisse le diaphragme, repousse les abdominaux et gonfle le thorax.###Je suis chez ce cher Serge, cherchant des chers cierges, assis sur des chers sièges.###Le chiche, son chicha et son chien sont souvent chez Sanson ou chez Charles sans se soucier de sa sécheuse sèche.";
+exo[11]="J’espère hypnotiser les sénateurs avec les chrysanthèmes disséminés dans l’hémicycle.###Les polytechniciens aussi ont besoin de s’hydrater.###C’est avec du rythme que le saxophoniste et le psychiatre joueur de synthé pourront se synchroniser.###Un asthmatique en crise présente une inspiration maximale qui abaisse le diaphragme, repousse les abdominaux et gonfle le thorax.###Je suis chez ce cher Serge, cherchant des chers cierges, assis sur des chers sièges.###Le chiche, son chicha et son chien sont souvent chez Sanson ou chez Charles sans se soucier de sa sécheuse sèche.";
 
 titre[12]="À et F (auriculaires)";
 lettres[12]="àfÀF";
 conseil[12]=0;
-exo[12]="Riri, Fifi et Loulou.###Pif, paf, pouf.###Et voilà, on a fait le tour de toutes les touches.###Le bépo, c'est facile, finalement.###À partir de maintenant, il suffira de faire quelques derniers petits efforts.";
+exo[12]="Riri, Fifi et Loulou.###Pif, paf, pouf.###Et voilà, on a fait le tour de toutes les touches.###Le bépo, c’est facile, finalement.###À partir de maintenant, il suffira de faire quelques derniers petits efforts.";
 
 titre[13]="Accents morts ^ et ¨ (Ê, Î, Û, Â, Ô, Ï, Ä)";
 lettres[13]="^¨êÊ";
 conseil[13]=5;
-exo[13]="Être ou ne pas être.###Peut-être bien que oui.###Il paraît qu'un bon feu dans l'âtre contribue au bien-être.###Il est sûr et certain.###La brebis a dû paître à côté.###La laïcité peut être ambiguë.###Le canoë est emporté dans un maelström.###C'est la belle nuit de Noël.###Ma trisaïeule hébraïque raffole de l'aïoli.###Les paranoïaques poussent des cris suraigüs.";
+exo[13]="Être ou ne pas être.###Peut-être bien que oui.###Il paraît qu’un bon feu dans l’âtre contribue au bien-être.###Il est sûr et certain.###La brebis a dû paître à côté.###La laïcité peut être ambiguë.###Le canoë est emporté dans un maelström.###C’est la belle nuit de Noël.###Ma trisaïeule hébraïque raffole de l’aïoli.###Les paranoïaques poussent des cris suraigüs.";
 
 titre[14]="Touches en AltGr (Ù, Œ, Æ)";
 lettres[14]="ùœæÙŒÆ";
 conseil[14]=0;
-exo[14]="Où que soit cet œuf.###Qui vole un œuf, vole un bœuf.###Curriculum Vitæ.###Et cætera.###Lætitia et Éric sont arrivés ex æquo.###Où qu'il soit, il y est.###Je ne sais où ni quand.";
+exo[14]="Où que soit cet œuf.###Qui vole un œuf, vole un bœuf.###Curriculum Vitæ.###Et cætera.###Lætitia et Éric sont arrivés ex æquo.###Où qu’il soit, il y est.###Je ne sais où ni quand.";
 
-titre[15]="Tiret et point d'interrogation (avec espace insécable)";
+titre[15]="Tiret et point d’interrogation (avec espace insécable)";
 lettres[15]="-?"
 conseil[15]=6;
-exo[15]="Les chaussettes de l'archi-duchesse sont-elles sèches, archi-sèches ?###Où est-il ?###Que se passe-t-il ?###Qu'est-il arrivé ?###Qu'y a-t-il ?###Peut-être est-il trop tard.";
+exo[15]="Les chaussettes de l’archi-duchesse sont-elles sèches, archi-sèches ?###Où est-il ?###Que se passe-t-il ?###Qu’est-il arrivé ?###Qu’y a-t-il ?###Peut-être est-il trop tard.";
 
 titre[16]="Ponctuation double (; : !) et espace insécable";
 lettres[16]=";:!";
@@ -112,9 +112,9 @@ exo[18]="la Haute Autorité pour la Diffusion des Œuvres et la Protection des D
 titre[19]="Pangrammes";
 lettres[19]="";
 conseil[19]=8;
-exo[19]="Vif PDG mentor, exhibez la squaw jockey.###Juge, flambez l'exquis patchwork d'Yvon.###Vif juge, trempez ce blond whisky aqueux.###Fripon, mixez l'abject whisky qui vidange.###Buvez de ce whisky que le patron juge fameux.###Portez ce vieux whisky au juge blond qui fume.###Jugez qu'un vieux whisky blond pur malt fonce.###Faux kwachas ? Quel projet de voyage zambien !###Fougueux, j'enivre la squaw au pack de beau zythum.###Ketch, yawl, jonque flambant neuve… jugez des prix !###Vieux pelage que je modifie : breitschwanz ou yak ?###Prouvez, beau juge, que le fameux sandwich au yak tue.###Voyez ce jeu exquis wallon, de graphie en kit mais bref.";
+exo[19]="Vif PDG mentor, exhibez la squaw jockey.###Juge, flambez l’exquis patchwork d’Yvon.###Vif juge, trempez ce blond whisky aqueux.###Fripon, mixez l’abject whisky qui vidange.###Buvez de ce whisky que le patron juge fameux.###Portez ce vieux whisky au juge blond qui fume.###Jugez qu’un vieux whisky blond pur malt fonce.###Faux kwachas ? Quel projet de voyage zambien !###Fougueux, j’enivre la squaw au pack de beau zythum.###Ketch, yawl, jonque flambant neuve… jugez des prix !###Vieux pelage que je modifie : breitschwanz ou yak ?###Prouvez, beau juge, que le fameux sandwich au yak tue.###Voyez ce jeu exquis wallon, de graphie en kit mais bref.";
 
 titre[20]="Pangrammes accentués";
 lettres[20]="";
 conseil[20]=0;
-exo[20]="Perchez dix, vingt woks. Qu'y flambé-je ?###Le moujik équipé de faux breitschwanz voyage.###Kiwi fade, aptéryx, quel jambon vous gâchez !###Voyez le brick géant que j'examine près du wharf.###Bâchez la queue du wagon-taxi avec les pyjamas du fakir.###Mon pauvre zébu ankylosé choque deux fois ton wagon jaune.###Voix ambiguë d'un cœur qui, au zéphyr, préfère les jattes de kiwis.";
+exo[20]="Perchez dix, vingt woks. Qu’y flambé-je ?###Le moujik équipé de faux breitschwanz voyage.###Kiwi fade, aptéryx, quel jambon vous gâchez !###Voyez le brick géant que j’examine près du wharf.###Bâchez la queue du wagon-taxi avec les pyjamas du fakir.###Mon pauvre zébu ankylosé choque deux fois ton wagon jaune.###Voix ambiguë d’un cœur qui, au zéphyr, préfère les jattes de kiwis.";
