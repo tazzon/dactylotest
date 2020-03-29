@@ -55,7 +55,8 @@ function test(e)
 		val_temp="";
 		return;
 	}
-	color_car();	
+	if(document.getElementById("val_curseur").checked == true )
+	  color_car();	
 	
 	val_temp=val;
 }
@@ -199,7 +200,8 @@ function ligne_suivante(reload)
 	
 
 	recommencer = false;
-	color_car("init");	
+	if(document.getElementById("val_curseur").checked == true )
+	  color_car("init");	
 	//live_var();
 	}
 	//document.getElementById("resultats").innerHTML = "l="+l+"<br/>"+le_texte[l-1];
@@ -241,7 +243,7 @@ function val_anti_correct(a)
 
 var colw = 0;
 var col_cur = la_couleur_du_curseur; // couleur du curseur
-function color_car(a)
+function  color_car(a)
 {
   
   if (a == "init")

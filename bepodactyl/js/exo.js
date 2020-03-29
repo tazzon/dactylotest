@@ -78,7 +78,7 @@ conseil[4]=0;
   titre[1][5]=titre[0][5];
 lettres[0][5]="élÉL";
 lettres[1][5]=lettres[0][5];
-    exo[0][5]="Ils étaient pourtant anéantis###Le ré et le la ont été entendus###Il a idéalisé son idole antirévolutionnaire###Un oiseau a des ailes et en réalité les avions aussi###Une eau désaltérante est la plus utile durant un été étoilé###Les dépolluants ont évolué et peuvent délivrer une eau saine###Nous avons pu altérer les évolutions prévues de notre Étoile en étain###Le député et le président ont été élus suite au vote sans surprise de la droite###Alerté par la radio un adulte daltonien a pu délivrer le latéral droit de Lens###Une révolutionnaire esseulée est délaissée par les prisonniers dépassés par les événements";
+    exo[0][5]="Ils étaient pourtant anéantis###Le ré et le la ont été entendus###Il a idéalisé son idole antirévolutionnaire###Un oiseau a des ailes et en réalité les avions aussi###Une eau désaltérante est la plus utile durant un été étoilé###Les dépolluants ont évolué et peuvent délivrer une eau saine###Nous avons pu altérer les évolutions prévues de notre Étoile en étain###Le député et le président ont été élus suite au vote sans surprise de la droite###Alerté par la radio un adulte daltonien a pu délivrer le latéral droit de Lens###Une révolutionnaire esseulée est délaissée par les prisonniers dépassés par la situation";
     exo[1][5]=exo[0][5];
 
 conseil[5]=0;
@@ -133,7 +133,7 @@ conseil[10]=0;
   titre[1][11]=titre[0][11];
 lettres[0][11]="yhYH";
 lettres[1][11]=lettres[0][11];
-    exo[0][11]="J'espère hypnotiser les sénateurs avec les chrysanthèmes disséminés dans l'hémicycle.###Les polytechniciens aussi ont besoin de s'hydrater.###C'est avec du rythme que le saxophoniste et le psychiatre joueur de synthé pourront se synchroniser.###Un asthmatique en crise présente une inspiration maximale qui abaisse le diaphragme, repousse les abdominaux et gonfle le thorax.###Je suis chez ce cher Serge, cherchant des chers cierges, assis sur des chers sièges.###Le chiche, son chicha et son chien sont souvent chez Sanson ou chez Charles sans se soucier de sa sécheuse sèche.";
+    exo[0][11]="J'espère hypnotiser les sénateurs avec les chrysanthèmes disséminés dans l'hémicycle.###Les polytechniciens aussi ont besoin de s'hydrater.###C'est avec du rythme que le saxophoniste et le psychiatre joueur de synthé pourront se synchroniser.###Un asthmatique en crise présente une inspiration maximale qui abaisse le diaphragme, repousse les abdominaux et remplit le thorax.###Je suis chez ce cher Serge, cherchant des chers cierges, assis sur des chers sièges.###Le chiche, son chicha et son chien sont souvent chez Sanson ou chez Charles sans se soucier de sa sécheuse sèche.";
     exo[1][11]=exo[0][11].replace(/'/g,"’");
 
 conseil[11]=4;
@@ -150,7 +150,7 @@ conseil[12]=0;
   titre[1][13]=titre[0][13];
 lettres[0][13]="^¨êÊ";
 lettres[1][13]=lettres[0][13];
-    exo[0][13]="Être ou ne pas être.###Peut-être bien que oui.###Il paraît qu'un bon feu dans l'âtre contribue au bien-être.###Il est sûr et certain.###La brebis a dû paître à côté.###La laïcité peut être ambiguë.###Le canoë est emporté dans un maelström.###C'est la belle nuit de Noël.###Ma trisaïeule hébraïque raffole de l'aïoli.###Les paranoïaques poussent des cris suraigüs.";
+    exo[0][13]="Être ou ne pas être.###Il paraît qu'un bon feu dans l'âtre contribue à être bien.###Il est sûr et certain.###La brebis a dû paître à côté.###La laïcité peut être ambiguë.###Le canoë est emporté dans un maelström.###C'est la belle nuit de Noël.###Ma trisaïeule hébraïque raffole de l'aïoli.###Les paranoïaques poussent des cris suraigüs.";
     exo[1][13]=exo[0][13].replace(/'/g,"’");
 
 conseil[13]=5;
