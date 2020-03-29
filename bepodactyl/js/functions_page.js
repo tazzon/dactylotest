@@ -141,43 +141,52 @@ function options(e)
 	//alert(touche);
 }
 
-function change_bepo_version()
+function change_bepo_version(index)
 {
-	bepo_index++;
-	if(bepo_index >= bepo.length) bepo_index=0;
-	type_clavier(type_kb);
+	bepo_index=index;
+	
+	//type_clavier(type_kb);
+	type_clavier();
 	change_exo();
 	localStorage.setItem("bepo_index",bepo_index);
 
 }
 
-var type_kb=1; // clavier décalé (0=décalé ; 1=typematrix ; 2=pas de clavier)
+var type_kb=1; // clavier décalé (0=pas de clavier ; 1=décalé ; 2=typematrix)
 
 function type_clavier(a)
 {
 	
-	type_kb=a;
+	if(typeof(a) != "undefined")
+	{  
+	  if(isNaN(a)) a=parseInt(a);
+	  type_kb=a;
+	}
+	else
+	  a=type_kb;
+	  
 	if (a == 0)
 	{
 		document.getElementById("aff_kb").innerHTML="";
 		document.getElementById("type_kb_0").ckecked=true;
-		localStorage.setItem("type_kb",0);
+		//localStorage.setItem("type_kb",0);
 	}
 
 	if (a == 1)
 	{
 	  document.getElementById("aff_kb").innerHTML=kb_decal()+'<div class="bepo_version">'+bepo[bepo_index].version+'</div>';
 	  document.getElementById("type_kb_1").ckecked=true;
-	  localStorage.setItem("type_kb",1);
+	  //localStorage.setItem("type_kb",1);
 	  color_key();
 	}
 	if (a == 2)
 	{
 	  document.getElementById("aff_kb").innerHTML=kb_typematrix()+'<div class="bepo_version">'+bepo[bepo_index].version+'</div>';
 	  document.getElementById("type_kb_2").ckecked=true;
-	  localStorage.setItem("type_kb",2);
+	  //localStorage.setItem("type_kb",2);
 	  color_key();
 	}
+	localStorage.setItem("type_kb",type_kb);
 }
 
 
@@ -285,7 +294,7 @@ bepo[1].lvl[3]= " „“”⩽⩾       _˝ Œ        ÆÙ          ^ ‘’· 
 
 
 var k=0;
-var bepo_index=1;
+var bepo_index=1; // par défaut v1.1
 function kb_decal()
 {
 	var row_dec = new Array(0,35,41,28);
