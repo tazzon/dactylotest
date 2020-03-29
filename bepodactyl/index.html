@@ -58,12 +58,16 @@
     <!--input type="checkbox" id="val_kb" checked="checked" onChange="aff_kb(this.checked)" /> Afficher l’image du clavier<br/-->
     
     Image du clavier<br/>
-    <input type="radio" name="type_kb" id="type_kb" checked="checked" value="kb_decal"       onChange="type_kb=this.value;aff_kb(true)"  /> Clavier décalé<br/>
-    <input type="radio" name="type_kb" id="type_kb"                   value="kb_typematrix"  onChange="type_kb=this.value;aff_kb(true)"  /> Typematrix<br/>
-    <input type="radio" name="type_kb" id="type_kb"                   value="none"           onChange="type_kb=this.value;aff_kb(false)" /> Pas de clavier<br/>
+    <input type="radio" name="type_kb" id="type_kb_1" checked="checked" value="1" onChange="type_clavier(this.value)"  /><label for="type_kb_1"> Clavier décalé</label><br/>
+    <input type="radio" name="type_kb" id="type_kb_2"                   value="2" onChange="type_clavier(this.value)"  /><label for="type_kb_2"> Typematrix</label><br/>
+    <input type="radio" name="type_kb" id="type_kb_0"                   value="0" onChange="type_clavier(this.value)" ./><label for="type_kb_0"> Pas de clavier</label><br/>
     <br/>
-    <input type="checkbox" id="val_curseur" onChange="val_curseur(this.checked)" /> Activer le curseur<br/>
+    Version BÉPO<br/>
+    <input type="radio" name="v_bepo" id="v_bepo_0" value="0" checked="checked" onChange="change_bepo_version(this.value)" /><label for="v_bepo_0"> V1.0</label><br/>
+    <input type="radio" name="v_bepo" id="v_bepo_1" value="1"                   onChange="change_bepo_version(this.value)" /><label for="v_bepo_1"> V1.1</label><br/>
     <br/>
+    <input type="checkbox" id="val_curseur" onChange="val_curseur(this.checked)" /><label for="val_curseur"> Activer le curseur</label><br/>
+    <!--br/>
     <input type="checkbox" id="val_jeu" onChange="modejeu(this.checked)" /> Mode jeu<br/>
     <!--input type="checkbox" id="val_nbsp" checked="checked" onChange="nbspace=this.checked;ligne_suivante(true)" /> Utiliser les espaces insécables<br/-->
     <!--input type="checkbox" id="anti_correct" onChange="val_anti_correct(this.checked)" /> Activer l’anti-correction<br/-->

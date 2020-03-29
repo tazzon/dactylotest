@@ -15,12 +15,13 @@ var vies = 2;
 
 function change_exo(a)
 {
-  if (a=="+" && exo_en_cours<exo.length-1)
+  if (a=="+" && exo_en_cours<exo[bepo_index].length-1)
     exo_en_cours++;
   else if (a=="-" && exo_en_cours>0)
     exo_en_cours--;
 
   new_text(exo_en_cours);
+  localStorage.setItem("exo_en_cours",exo_en_cours);
 }
 
 
@@ -32,7 +33,6 @@ function new_text(a)
 	nb_recom=0;
 	l=0;  // la ligne en cours
 
-
 	if (!a) // si le numéro de l'exercice n'est pas défini
 	  a=0;  // on choisi par défaut le premier (donc le 0)
 
@@ -40,14 +40,14 @@ function new_text(a)
 
 	var reg = new RegExp("###","g");
 	
-	le_texte = exo[a].split(reg);
+	le_texte = exo[bepo_index][a].split(reg);
 	
 	document.getElementById("resultats").innerHTML = "";	// efface la zone de résulats
 	document.getElementById("txt").value = "";		// efface le texte frappé																//on efface le texte précédement tapé
 	document.getElementById("txt").focus();			// donne le focus à la zone de frappe
 
 
-	document.getElementById("exo_nb").innerHTML  = (a+1) +" : "+titre[a];	// affiche le numéro de l'exo (+1 pour faire joli) et le titre de l'exercice
+	document.getElementById("exo_nb").innerHTML  = (a+1) +" : "+titre[bepo_index][a];	// affiche le numéro de l'exo (+1 pour faire joli) et le titre de l'exercice
 
 	//vies = 2;	
 	if (mode_jeu)
@@ -69,7 +69,7 @@ function new_text(a)
 		document.getElementById("but_-").style.color = "grey";
 		document.getElementById("but_-").style.borderColor = "grey";
 	}
-	if (exo_en_cours == exo.length-1)
+	if (exo_en_cours == exo[bepo_index].length-1)
 	{
 		document.getElementById("but_+").style.color = "grey";
 		document.getElementById("but_+").style.borderColor = "grey";
@@ -141,40 +141,43 @@ function options(e)
 	//alert(touche);
 }
 
-
-var type_kb = "kb_decal";
-
-function aff_kb(a)
+function change_bepo_version()
 {
-	if (a == true)
-		type_clavier(type_kb);
-	else
-		type_clavier("none");
+	bepo_index++;
+	if(bepo_index >= bepo.length) bepo_index=0;
+	type_clavier(type_kb);
+	change_exo();
+	localStorage.setItem("bepo_index",bepo_index);
+
 }
+
+var type_kb=1; // clavier décalé (0=décalé ; 1=typematrix ; 2=pas de clavier)
 
 function type_clavier(a)
 {
-	if (a == "none")
+	
+	type_kb=a;
+	if (a == 0)
 	{
 		document.getElementById("aff_kb").innerHTML="";
-		return;
+		document.getElementById("type_kb_0").ckecked=true;
+		localStorage.setItem("type_kb",0);
 	}
 
-        if (a == "kb_decal")
-          document.getElementById("aff_kb").innerHTML=kb_decal();
-
-        if (a == "kb_typematrix")
-          document.getElementById("aff_kb").innerHTML=kb_typematrix();
-
-
-	//document.getElementById("aff_kb").innerHTML=kb_typematrix();
-	//document.getElementById("aff_kb").innerHTML=kb_decal();
-	//document.getElementById("aff_kb").innerHTML='<img src="bepo-standard.png" alt="clavier bépo" />';
-
-        
-	color_key();
-
-
+	if (a == 1)
+	{
+	  document.getElementById("aff_kb").innerHTML=kb_decal()+'<div class="bepo_version">'+bepo[bepo_index].version+'</div>';
+	  document.getElementById("type_kb_1").ckecked=true;
+	  localStorage.setItem("type_kb",1);
+	  color_key();
+	}
+	if (a == 2)
+	{
+	  document.getElementById("aff_kb").innerHTML=kb_typematrix()+'<div class="bepo_version">'+bepo[bepo_index].version+'</div>';
+	  document.getElementById("type_kb_2").ckecked=true;
+	  localStorage.setItem("type_kb",2);
+	  color_key();
+	}
 }
 
 
@@ -201,13 +204,13 @@ function get_key(e,action)
 	}
 	
 	if (shift_down == true && altgr_down == true)
-		layout = bepo_4;
+		layout = bepo[bepo_index].lvl[3];
 	if (shift_down == true && altgr_down == false)
-		layout = bepo_2;
+		layout = bepo[bepo_index].lvl[1];
 	if (shift_down == false && altgr_down == true)
-		layout = bepo_3;
+		layout = bepo[bepo_index].lvl[2];
 	if (shift_down == false && altgr_down == false)
-		layout = bepo_1;
+		layout = bepo[bepo_index].lvl[0];
 
 	for (var k = 0 ; k < layout.length ; k++)
 	{
@@ -231,7 +234,7 @@ function color_key()
 
 	for (var i = 0 ; i < exo_en_cours ; i++)
 	{
-		exo_pre += lettres[i];
+		exo_pre += lettres[bepo_index][i];
 		//alert(exo_pre);
 	}
 
@@ -250,9 +253,9 @@ function color_key()
   				document.getElementById("k"+key).style.backgroundColor = "#c1f7ad";
   		}
   		
-  		for (var lettre = 0 ; lettre < lettres[exo_en_cours].length ; lettre++)
+  		for (var lettre = 0 ; lettre < lettres[bepo_index][exo_en_cours].length ; lettre++)
   		{
-  			b = lettres[exo_en_cours].charAt(lettre);
+  			b = lettres[bepo_index][exo_en_cours].charAt(lettre);
   			//alert(key+" _" +a+"_ _"+b+"_");
   			
   			if ( a == b && document.getElementById("k"+key) )
@@ -264,20 +267,25 @@ function color_key()
 }
 
 
-// BÉPO RC1.1
-var bepo_1 = "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k’qghf";
-var bepo_2 = "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
-var bepo_3 = "–—<>[]       | &œ ¡      æù¨€'       /\\{}… ¿    ";
-var bepo_4 = " „“”⩽⩾       _˝ Œ        ÆÙ          ^ ‘’·      ";
+var bepo=[];
 
-/*
-var bepo_1 = "²&é\"'(-è_çà)=azertyuiop^$qsdfghjklmù*<wxcvbn,;:!";
-var bepo_2 = " 1234567890°+AZERTYUIOP¨₤QSDFGHJKLM%µ>WXCVBN?./§";
-var bepo_3 = "  ~#{[|`\\^@]}  €                                ";
-var bepo_4 = "                                                ";
-*/
+bepo[0]={version:"BÉPO V1.0"};
+bepo[0].lvl=[];
+bepo[0].lvl[0]= "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k'qghf";
+bepo[0].lvl[1]= "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
+bepo[0].lvl[2]= "–—<>[]       | &œ ¡      æù¨€’        \\{}… ¿    ";
+bepo[0].lvl[3]= " „“”≤≥        ˝ Œ        ÆÙ            ‘’·      ";
+
+bepo[1]={version:"BÉPO V1.1"};
+bepo[1].lvl=[];
+bepo[1].lvl[0]= "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k’qghf";
+bepo[1].lvl[1]= "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
+bepo[1].lvl[2]= "–—<>[]       | &œ ¡      æù¨€'       /\\{}… ¿    ";
+bepo[1].lvl[3]= " „“”⩽⩾       _˝ Œ        ÆÙ          ^ ‘’·      ";
+
 
 var k=0;
+var bepo_index=1;
 function kb_decal()
 {
 	var row_dec = new Array(0,35,41,28);
@@ -296,9 +304,9 @@ function kb_decal()
                         if(k==37)
                           k105="border:dashed 1px black;";
 			if(j == 0)
-				kb += '<div style="'+k105+'margin-left:'+row_dec[i]+'px" class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
+				kb += '<div style="'+k105+'margin-left:'+row_dec[i]+'px" class="key" id="k'+k+'">'+bepo[bepo_index].lvl[0].charAt(k)+'</div>';
 			else
-				kb += '<div class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
+				kb += '<div class="key" id="k'+k+'">'+bepo[bepo_index].lvl[0].charAt(k)+'</div>';
 			k++;
 		}
 		kb += '<div style="clear:both"></div>';
@@ -328,11 +336,11 @@ function kb_typematrix()
 			  k=36;
 			  
                         if(j == 0)
-				kb += '<div style="margin-left:'+row_dec[i]+'px" class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
+				kb += '<div style="margin-left:'+row_dec[i]+'px" class="key" id="k'+k+'">'+bepo[bepo_index].lvl[0].charAt(k)+'</div>';
 			else if(j == key_space[i])
-				kb += '<div style="margin-left:20px" class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
+				kb += '<div style="margin-left:20px" class="key" id="k'+k+'">'+bepo[bepo_index].lvl[0].charAt(k)+'</div>';
 			else
-				kb += '<div class="key" id="k'+k+'">'+bepo_1.charAt(k)+'</div>';
+				kb += '<div class="key" id="k'+k+'">'+bepo[bepo_index].lvl[0].charAt(k)+'</div>';
 			k++;
  			if(k == 36)
 			  k=38;

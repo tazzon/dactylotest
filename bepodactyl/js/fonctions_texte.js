@@ -194,14 +194,14 @@ function ligne_suivante(reload)
 			}
 		}
 		l++;
-	}
+	//}
 	document.getElementById("rd_txt").innerHTML = ligne_tab.join("");
 	
 
 	recommencer = false;
 	color_car("init");	
 	//live_var();
-
+	}
 	//document.getElementById("resultats").innerHTML = "l="+l+"<br/>"+le_texte[l-1];
 }
 
@@ -211,11 +211,13 @@ function val_curseur(a)
   {
     col_cur = la_couleur_du_curseur;
     cur_checked = "checked";
+    localStorage.setItem("cur",true);
   }
   else
   {
     col_cur = "inherit";
     cur_checked = "";
+    localStorage.setItem("cur",false);
   }
   //color_mot();
   color_car();
