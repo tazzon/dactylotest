@@ -24,8 +24,8 @@ conseils[2]="Pour le M et le Z, l’auriculaire droit doit s’étendre hors de 
 conseils[3]="Le K et le point se font avec la main gauche. L’apostrophe et le Q se font avec la main droite. L’apostrophe nécessite d’étirer un peu plus l’index. Attention à ne pas confondre les deux ! Le principe est toujours le même : la précision est bien plus importante que la rapidité.";
 conseils[4]="Attention, c’est bien l’annulaire gauche qui doit être utilisé pour faire le « Y » !";
 conseils[5]="L’accent circonflexe (en dessous du point d’exclamation) et le tréma (en AltGr+I) doivent être tapés seuls. Vous ne verrez rien, mais l’accent apparaîtra sur la voyelle tapée ensuite. Un subtilité pour Ê, qui peut être obtenu de deux façons : par la 105ème touche du clavier Ê, ou avec l’accent circonflexe, puis le E.";
-conseils[6]="Une petite difficulté supplémentaire pour les deux points, le point-virgule, le point d’exclamation et le point d’interrogation qui doivent tous être précédés d’une espace insécable (représentée ici par « ␣ »), obtenue en maintenant la touche majuscule durant la frappe de l’espace. Conserver ensuite la touche majuscule appuyée pour la frappe du signe de ponctuation, qui est justement en majuscule lui-aussi. Ne pas oublier de relâcher avant la frappe de l’espace suivante.";
-conseils[7]="Une petite difficulté supplémentaire pour les guillemets ouverts qui doivent être suivis d’une espace insécable, ainsi que pour les guillemets fermés qui doivent être précédés d’une espace insécable, obtenue en maintenant la touche majuscule durant la frappe de l’espace.";
+conseils[6]="Une petite difficulté supplémentaire pour les deux points qui doivent être précédés d'une espace insécable et le point-virgule, le point d’exclamation et le point d’interrogation qui doivent tous être précédés d’une espace insécable fine (représentée ici par <span style=\"background-color:#aaa\"> </span> pour l'insécable et <span style=\"background-color:#ccc\"> </span> pour la fine insécable), Ces deux espaces sont obtenues avec la barre espace en shitf+espace ou shift+altGr+espace (selon votre version du BÉPO). Conserver ensuite la touche shift appuyée pour la frappe du signe de ponctuation, qui est justement en shift lui-aussi. Ne pas oublier de relâcher avant la frappe de l’espace suivante.";
+conseils[7]="Une petite difficulté supplémentaire pour les guillemets ouverts qui doivent être suivis d’une espace fine insécable (représentée ici par <span style=\"background-color:#ccc\"> </span>), ainsi que pour les guillemets fermés qui doivent être précédés d’une espace fine insécable, obtenue en maintenant shift ou shift+altGr (selon votre version du BÉPO) durant la frappe de l’espace.";
 conseils[8]="En guise de conclusion, voici des exercices où, à chaque ligne, on trouve toutes les lettres de l’alphabet : des pangrammes.";
 
 
@@ -163,12 +163,13 @@ conseil[14]=0;
 exo[0][14]="Où que soit cet œuf.###Qui vole un œuf, vole un bœuf.###Curriculum Vitæ.###Et cætera.###Lætitia et Éric sont arrivés ex æquo.###Où qu'il soit, il y est.###Je ne sais où ni quand.";
 exo[1][14]=exo[0][14].replace(/'/g,"’");
 
-titre[0][15]="Tiret et point d’interrogation (avec espace insécable)";
+titre[0][15]="Tiret et point d’interrogation (avec espace fine insécable)";
 titre[1][15]=titre[0][15];
 lettres[0][15]="-?"
 lettres[1][15]=lettres[0][15];
 conseil[15]=6;
-exo[0][15]="Les chaussettes de l'archi-duchesse sont-elles sèches, archi-sèches ?###Où est-il ?###Que se passe-t-il ?###Qu'est-il arrivé ?###Qu'y a-t-il ?###Peut-être est-il trop tard.";
+//exo[0][15]="Les chaussettes de l'archi-duchesse sont-elles sèches, archi-sèches ?###Où est-il ?###Que se passe-t-il ?###Qu'est-il arrivé ?###Qu'y a-t-il ?###Peut-être est-il trop tard.";
+exo[0][15]="Les chaussettes de l'archi-duchesse sont-elles sèches, archi-sèches ?###Où est-il ?###Que se passe-t-il ?###Qu'est-il arrivé ?###Qu'y a-t-il ?###Peut-être est-il trop tard.";
 exo[1][15]=exo[0][15].replace(/'/g,"’");
 
 titre[0][16]="Ponctuation double (; : !) et espace insécable";
@@ -176,7 +177,8 @@ titre[1][16]=titre[0][16];
 lettres[0][16]=";:!";
 lettres[1][16]=lettres[0][16];
 conseil[16]=6;
-exo[0][16]="Et revoilà la sous-préfète !###La voilà ; elle arrive !";
+//exo[0][16]="Et revoilà la sous-préfète !###La voilà ; elle arrive !";
+exo[0][16]="Et revoilà la sous-préfète !###La voilà ; elle arrive !";
 exo[1][16]=exo[0][16].replace(/'/g,"’");
 
 titre[0][17]="Parenthèses";
@@ -192,7 +194,8 @@ titre[1][18]=titre[0][18];
 lettres[0][18]="«»";
 lettres[1][18]=lettres[0][18];
 conseil[18]=7;
-exo[0][18]="la Haute Autorité pour la Diffusion des Œuvres et la Protection des Droits sur Internet ou « HADOPI »";
+//exo[0][18]="la Haute Autorité pour la Diffusion des Œuvres et la Protection des Droits sur Internet ou « HADOPI »";
+exo[0][18]="la Haute Autorité pour la Diffusion des Œuvres et la Protection des Droits sur Internet ou « HADOPI »";
 exo[1][18]=exo[0][18].replace(/'/g,"’");
 
 titre[0][19]="Pangrammes";
@@ -200,7 +203,8 @@ titre[1][19]=titre[0][19];
 lettres[0][19]="";
 lettres[1][19]=lettres[0][19];
 conseil[19]=8;
-exo[0][19]="Vif PDG mentor, exhibez la squaw jockey.###Juge, flambez l'exquis patchwork d'Yvon.###Vif juge, trempez ce blond whisky aqueux.###Fripon, mixez l'abject whisky qui vidange.###Buvez de ce whisky que le patron juge fameux.###Portez ce vieux whisky au juge blond qui fume.###Jugez qu'un vieux whisky blond pur malt fonce.###Faux kwachas ? Quel projet de voyage zambien !###Fougueux, j'enivre la squaw au pack de beau zythum.###Ketch, yawl, jonque flambant neuve… jugez des prix !###Vieux pelage que je modifie : breitschwanz ou yak ?###Prouvez, beau juge, que le fameux sandwich au yak tue.###Voyez ce jeu exquis wallon, de graphie en kit mais bref.";
+//exo[0][19]="Vif PDG mentor, exhibez la squaw jockey.###Juge, flambez l'exquis patchwork d'Yvon.###Vif juge, trempez ce blond whisky aqueux.###Fripon, mixez l'abject whisky qui vidange.###Buvez de ce whisky que le patron juge fameux.###Portez ce vieux whisky au juge blond qui fume.###Jugez qu'un vieux whisky blond pur malt fonce.###Faux kwachas ? Quel projet de voyage zambien !###Fougueux, j'enivre la squaw au pack de beau zythum.###Ketch, yawl, jonque flambant neuve… jugez des prix !###Vieux pelage que je modifie : breitschwanz ou yak ?###Prouvez, beau juge, que le fameux sandwich au yak tue.###Voyez ce jeu exquis wallon, de graphie en kit mais bref.";
+exo[0][19]="Vif PDG mentor, exhibez la squaw jockey.###Juge, flambez l'exquis patchwork d'Yvon.###Vif juge, trempez ce blond whisky aqueux.###Fripon, mixez l'abject whisky qui vidange.###Buvez de ce whisky que le patron juge fameux.###Portez ce vieux whisky au juge blond qui fume.###Jugez qu'un vieux whisky blond pur malt fonce.###Faux kwachas ? Quel projet de voyage zambien !###Fougueux, j'enivre la squaw au pack de beau zythum.###Ketch, yawl, jonque flambant neuve… jugez des prix !###Vieux pelage que je modifie : breitschwanz ou yak ?###Prouvez, beau juge, que le fameux sandwich au yak tue.###Voyez ce jeu exquis wallon, de graphie en kit mais bref.";
 exo[1][19]=exo[0][19].replace(/'/g,"’");
 
 titre[0][20]="Pangrammes accentués";
@@ -208,5 +212,6 @@ titre[1][20]=titre[0][20];
 lettres[0][20]="";
 lettres[1][20]=lettres[0][20];
 conseil[20]=0;
-exo[0][20]="Perchez dix, vingt woks. Qu'y flambé-je ?###Le moujik équipé de faux breitschwanz voyage.###Kiwi fade, aptéryx, quel jambon vous gâchez !###Voyez le brick géant que j'examine près du wharf.###Bâchez la queue du wagon-taxi avec les pyjamas du fakir.###Mon pauvre zébu ankylosé choque deux fois ton wagon jaune.###Voix ambiguë d'un cœur qui, au zéphyr, préfère les jattes de kiwis.";
+//exo[0][20]="Perchez dix, vingt woks. Qu'y flambé-je ?###Le moujik équipé de faux breitschwanz voyage.###Kiwi fade, aptéryx, quel jambon vous gâchez !###Voyez le brick géant que j'examine près du wharf.###Bâchez la queue du wagon-taxi avec les pyjamas du fakir.###Mon pauvre zébu ankylosé choque deux fois ton wagon jaune.###Voix ambiguë d'un cœur qui, au zéphyr, préfère les jattes de kiwis.";
+exo[0][20]="Perchez dix, vingt woks. Qu'y flambé-je ?###Le moujik équipé de faux breitschwanz voyage.###Kiwi fade, aptéryx, quel jambon vous gâchez !###Voyez le brick géant que j'examine près du wharf.###Bâchez la queue du wagon-taxi avec les pyjamas du fakir.###Mon pauvre zébu ankylosé choque deux fois ton wagon jaune.###Voix ambiguë d'un cœur qui, au zéphyr, préfère les jattes de kiwis.";
 exo[1][20]=exo[0][20].replace(/'/g,"’");

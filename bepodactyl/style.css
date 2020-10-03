@@ -71,7 +71,9 @@ p {
 	background-color:white;
 	float:left;
 }
-
+#ksp{
+	font-size:0.8em;
+}
 
 input[type=button], button {
   border:1px black solid;

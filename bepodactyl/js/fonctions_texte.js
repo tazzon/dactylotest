@@ -174,9 +174,17 @@ function ligne_suivante(reload)
 					  if (ligne_tmp[j] == " ") // si c'est une espace insécable
                                           {
                                             if(nbspace == true)
-      					      ligne_tmp[j] = '<span id="car_'+j+'">␣</span>';
+      					      ligne_tmp[j] = '<span style="background-color:#aaa" id="car_'+j+'"> </span>';
                                             else
-                                              ligne_tmp[j] = '<span id="car_'+j+'"> </span>';
+                                              ligne_tmp[j] = '<span id="car_'+j+'"> </span>';
+                                          }
+
+					  else if (ligne_tmp[j] == " ") // si c'est une espace fine insécable
+                                          {
+                                            if(nbspace == true)
+      					      ligne_tmp[j] = '<span style="background-color:#ccc" id="car_'+j+'"> </span>';
+                                            else
+                                              ligne_tmp[j] = '<span id="car_'+j+'"> </span>';
                                           }
 
                                           else 
@@ -243,21 +251,31 @@ function val_anti_correct(a)
 
 var colw = 0;
 var col_cur = la_couleur_du_curseur; // couleur du curseur
+var colcarorigin=[];
 function  color_car(a)
 {
   
   if (a == "init")
+  {
 	colw = 0;
-  else
-	colw = document.getElementById("txt").value.length;
-
-	for (var i = 0 ; i < le_texte[l-1].length ; i++)
+	colcarorigin=[];
+	for (var i=0 ; i<le_texte[l-1].length ; i++)
 	{
-		if (document.getElementById("car_"+i))
-			document.getElementById("car_"+(i)).style.backgroundColor = "inherit";
-  	}
-	if (document.getElementById("car_"+colw))
-		document.getElementById("car_"+colw).style.backgroundColor = col_cur;
+		colcarorigin[i]=document.getElementById("car_"+i).style.backgroundColor;
+	}
+  }
+  else
+  {
+    colw = document.getElementById("txt").value.length;
+  }
+
+  for (var i = 0 ; i < le_texte[l-1].length ; i++)
+  {
+    if (document.getElementById("car_"+i))
+      document.getElementById("car_"+(i)).style.backgroundColor = colcarorigin[i];//"inherit";
+  }
+  if (document.getElementById("car_"+colw))
+    document.getElementById("car_"+colw).style.backgroundColor = col_cur;
 }
 
 function aff_result() // replacer les undefined par des espaces insécables (pour l'affichage)

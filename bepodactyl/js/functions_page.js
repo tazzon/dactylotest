@@ -211,20 +211,34 @@ function get_key(e,action)
 		if (touche == 17 || touche == 225) //altgr 
 			altgr_down = false;
 	}
-	
+	var layer=0;
 	if (shift_down == true && altgr_down == true)
-		layout = bepo[bepo_index].lvl[3];
+	{
+		layout=bepo[bepo_index].lvl[3];
+		layer = 3;
+	}
 	if (shift_down == true && altgr_down == false)
-		layout = bepo[bepo_index].lvl[1];
+	{
+		layout=bepo[bepo_index].lvl[1];
+		layer = 1;
+	}
 	if (shift_down == false && altgr_down == true)
-		layout = bepo[bepo_index].lvl[2];
+	{
+		layout=bepo[bepo_index].lvl[2];
+		layer = 2;
+	}
 	if (shift_down == false && altgr_down == false)
-		layout = bepo[bepo_index].lvl[0];
-
+	{
+		layout=bepo[bepo_index].lvl[0];
+		layer = 0;
+	}
 	for (var k = 0 ; k < layout.length ; k++)
 	{
 	  if(document.getElementById("k"+k))
+	  {
 		  document.getElementById("k"+k).innerHTML = layout.charAt(k);
+		  document.getElementById("ksp").innerHTML = bepo[bepo_index].splvl[layer];
+	  }
 	}
 	color_key();
 }
@@ -284,6 +298,7 @@ bepo[0].lvl[0]= "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k'qghf";
 bepo[0].lvl[1]= "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
 bepo[0].lvl[2]= "–—<>[]       | &œ ¡      æù¨€’        \\{}… ¿    ";
 bepo[0].lvl[3]= " „“”≤≥        ˝ Œ        ÆÙ            ‘’·      ";
+bepo[0].splvl=["esp", "esp ins", "_", "esp ins fine"];
 
 bepo[1]={version:"BÉPO V1.1"};
 bepo[1].lvl=[];
@@ -291,7 +306,7 @@ bepo[1].lvl[0]= "$\"«»()@+-/*=%bépoè^vdljzwauie,ctsrnmçêàyx.k’qghf";
 bepo[1].lvl[1]= "#1234567890°`BÉPOÈ!VDLJZWAUIE;CTSRNMÇÊÀYX:K?QGHF";
 bepo[1].lvl[2]= "–—<>[]       | &œ ¡      æù¨€'       /\\{}… ¿    ";
 bepo[1].lvl[3]= " „“”⩽⩾       _˝ Œ        ÆÙ          ^ ‘’·      ";
-
+bepo[1].splvl=["esp", "esp ins fine", "_", "esp ins"];
 
 var k=0;
 var bepo_index=1; // par défaut v1.1
@@ -299,6 +314,7 @@ function kb_decal()
 {
 	var row_dec = new Array(0,35,41,28);
 	var key_per_row = new Array(13,12,12,11);
+	var space_key={"row_dec":107,"width":123};
 	k=0;
 	var row=0;
 	var diff=0;
@@ -320,6 +336,7 @@ function kb_decal()
 		}
 		kb += '<div style="clear:both"></div>';
 	}
+	kb += '<div style="margin-left:'+space_key.row_dec+'px;width:'+space_key.width+'px" class="key" id="ksp">'+bepo[bepo_index].splvl[0]+'</div><div style="clear:both"></div>';
 	kb += '</div>';
 	
 	return kb;
@@ -330,6 +347,7 @@ function kb_typematrix()
 	var row_dec = new Array(0,26,26,26);
 	var key_per_row = new Array(13,12,11,11);
 	var key_space = new Array(6,5,5,5);
+	var space_key={"row_dec":104,"width":117};
 	k=0;
 	var row=0;
 
@@ -362,6 +380,7 @@ function kb_typematrix()
 		kb += '<div style="clear:both"></div>';
                 //k=48; // pour avoir le nombre total de touche
 	}
+	kb += '<div style="margin-left:'+space_key.row_dec+'px;width:'+space_key.width+'px" class="key" id="ksp">'+bepo[bepo_index].splvl[0]+'</div><div style="clear:both"></div>';
 	kb += '</div>';
 	
 	return kb;
