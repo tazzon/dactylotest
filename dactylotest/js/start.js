@@ -33,11 +33,11 @@ if (GetCookie("name") != null) document.getElementById("welcome").innerHTML = "B
 // "Linux"      for all versions of Linux
 // "UNIX"       for all other UNIX flavors 
 // "Unknown OS" indicates failure to detect the OS
-var OSName="Unknown OS";
-if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+var OSName="MacOS"; // forçage pour supporter le mode MacOS sur tous les systèmes, il semblerait qu'Ubuntu fasse aussi comme ça maintenant.
+/*if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
 if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
 if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";*/
 
 
 new_text('new');
