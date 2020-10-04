@@ -25,7 +25,13 @@ function new_text(a)
   curseur_err_bol = false;
   val_result("reset");  
 
-  if(a=="new")
+  if(window.location.href.indexOf('http') == -1) // on est en local
+  {
+    texte_en_cours = "Élise, d’abord, Œuf, vitæ, liste : un ; deux ; trois. Une question ? Oui ! C’est bien… – ou — sont des tirets quadratins. « Guillemets français ». Fin ! Élise, d’abord, Œuf, vitæ, liste : un ; deux ; trois. Une question ? Oui ! C’est bien… – ou — sont des tirets quadratins. « Guillemets français ». Fin ! Élise, d’abord, Œuf, vitæ, liste : un ; deux ; trois. Une question ? Oui ! C’est bien… – ou — sont des tirets quadratins. « Guillemets français ». Fin ! Élise, d’abord, Œuf, vitæ, liste : un ; deux ; trois. Une question ? Oui ! C’est bien…"; // texte avec plein de trucs pour tester
+    text_source = "Mode local";
+    text_nb = -1;
+  }
+  else if(a=="new")
   {
     // requète javascript pour récupérer numéro###credit###texte
     var req = "new_text.php?t="+text_nb+"&l="+document.getElementById("lang").value;
@@ -118,14 +124,15 @@ function options()
   //guillemets français « »
   if (document.getElementById("quote_fr").checked == false)
   {
-    le_texte = le_texte.replace(/« /g,'"');
-    le_texte = le_texte.replace(/ »/g,'"');
+    le_texte = le_texte.replace(/« /g,'"');
+    le_texte = le_texte.replace(/ »/g,'"');
   }
   
   //espaces insécables
   if (document.getElementById("no_brk_spc").checked == false)
   {
-    le_texte = le_texte.replace(/ /g," ");
+    le_texte = le_texte.replace(/ /g," "); // insécable
+    le_texte = le_texte.replace(/ /g," "); // fine insécable
   }
   
   //points de suspension
@@ -148,7 +155,9 @@ function options()
   // on ajoute les espaces incécables en même temps qu'on englobe chaque caractères dans un span pour le curseur
   for (var i=0 ; i<le_texte.length ; i++)
   {
-    if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ")
+    if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ") //insécable
+      tt[i] = '<span style="background-color:#aaaaaa"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
+    else if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ") //fine insécable
       tt[i] = '<span style="background-color:#cccccc"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
     else
       tt[i] = '<span id="car'+(i+1)+'">'+tt[i]+'</span>';
