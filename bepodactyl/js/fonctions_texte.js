@@ -34,7 +34,7 @@ function test(e)
 
     
 	val = document.getElementById("txt").value;                                   //le texte qu'on tape
-  if (val.substr(val.length-1,1) != le_texte[l-1].substr(val.length-1,1) && val.length-1 != le_texte[l-1].length && val.length != 0)
+  if (val.substr(val.length-1,1) != le_texte[l-1].substr(val.length-1,1) && val.substr(val.length-1,1) != le_texte_alt[l-1].substr(val.length-1,1) && val.length-1 != le_texte[l-1].length && val.length != 0)
   {
     document.getElementById("txt").style.backgroundColor = "#ffbbbb";
     col_cur = "red";

@@ -7,7 +7,8 @@ demande d'un nouveau texte…
 var exo_en_cours = 0;													// la leçon en cours												// le numéro de la leçon
 var cur_checked = "checked";
 
-var le_texte=new Array();
+var le_texte=new Array;
+var le_texte_alt=new Array; // version MacOS du texte
 
 var vies = 2;
 
@@ -29,6 +30,7 @@ function new_text(a)
 { 
 	//on réinitialise les variables
 	le_texte = new Array;
+	le_texte_alt = new Array;
 	recommencer = false;
 	nb_recom=0;
 	l=0;  // la ligne en cours
@@ -41,6 +43,8 @@ function new_text(a)
 	var reg = new RegExp("###","g");
 	
 	le_texte = exo[bepo_index][a].split(reg);
+	for (var i=0 ; i<le_texte.length ; i++)
+		le_texte_alt[i]=MacOsMod(le_texte[i]);
 	
 	document.getElementById("resultats").innerHTML = "";	// efface la zone de résulats
 	document.getElementById("txt").value = "";		// efface le texte frappé																//on efface le texte précédement tapé
@@ -77,6 +81,27 @@ function new_text(a)
 	
 	color_key(); // colorisation des touches du clavier
 
+}
+
+// retourne le texte à taper avec les diacritiques à la place des lettres pour
+// le mode compatibilité avec MacOs qui lors de la frappe d'une touche morte
+// affiche d'abord la diacritique puis la lettre à combiner lors de la frappe
+// suivante
+function MacOsMod(t)
+{
+  var reg=new RegExp("[àèùÀÈÙ]", "g");
+  t = t.replace(reg,"`");
+  
+  var reg=new RegExp("[âêîôûÂÊÎÔÛ]", "g");
+  t = t.replace(reg,"^");
+  
+  var reg=new RegExp("[äëïöüÄËÏÖÜ]", "g");
+  t = t.replace(reg,"¨");
+  
+  var reg=new RegExp("[éÉ]", "g");
+  t = t.replace(reg,"´");
+  
+  return t;
 }
 
 function view_options(action)
