@@ -20,7 +20,7 @@ exo[index_bepo][num_exercice]
 
 conseils[0]="";
 conseils[1]="Pour frapper les majuscules, utiliser l’auriculaire de la main opposée à celle qui tape la lettre. Ainsi, on doit utiliser l’auriculaire droit pour les majuscules AUIE et l’auriculaire gauche pour NRST.";
-conseils[2]="Pour le M et le Z, l’auriculaire droit doit s’étendre hors de sa colonne. La virgule et le É doivent être fait avec l’index gauche.";
+conseils[2]="Pour le M et le Z, l’auriculaire droit doit s’étendre hors de sa colonne. La virgule et le È doivent être faits avec l’index gauche.";
 conseils[3]="Le K et le point se font avec la main gauche. L’apostrophe et le Q se font avec la main droite. L’apostrophe nécessite d’étirer un peu plus l’index. Attention à ne pas confondre les deux ! Le principe est toujours le même : la précision est bien plus importante que la rapidité.";
 conseils[4]="Attention, c’est bien l’annulaire gauche qui doit être utilisé pour faire le « Y » !";
 conseils[5]="L’accent circonflexe (en dessous du point d’exclamation) et le tréma (en AltGr+I) doivent être tapés seuls. Vous ne verrez rien, mais l’accent apparaîtra sur la voyelle tapée ensuite. Un subtilité pour Ê, qui peut être obtenu de deux façons : par la 105ème touche du clavier Ê, ou avec l’accent circonflexe, puis le E.";
