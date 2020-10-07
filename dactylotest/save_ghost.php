@@ -61,6 +61,20 @@ function options()
 	return $string; 
 }*/
 
+// test si la valeur mpm est différente de NaN pour contrer les erreurs
+if($_GET["mpm"] == "NaN")
+{
+  exit("Le fantôme n’a pas pu être créé, la vitesse n’est pas conforme.");
+  //exit 0;
+}
+// test de la longueur du ghost pour contrer les petits malins du copier/coller
+if(strlen($_GET["ghost"]) < 3910)
+{
+  exit("Le fantôme n’a pas pu être créé, une erreur a été detectée sur le nombre de frappes effectuées.");
+  //exit 0;
+}
+
+
 do {
   $gh_name = random(8);
 } while (file_exists("ghost/".$gh_name.".gh")); // on test si le fichier existe et si c'est la cas on génère un autre nom (même si il y a peu de chance que ça se produise)
@@ -109,9 +123,7 @@ else
   $i = 1;
 }
 
-$f = fopen("ghost/gh_top_".$_GET["lang"]."_".$_GET["text"],"w");
-fwrite($f,$new_gh_top);
-fclose($f);
+
 
 
 $gh = true;
@@ -123,6 +135,11 @@ if ($gh)
   echo "Le fantôme a été créé sous le pseudo de <em>".$_GET["auteur"]."</em> à ".$_GET["mpm"]." mots par minute pour le texte numéro ".$_GET["text"].".<br/>Ce fantôme est classé ".$position."/".$i.".";
 else
   echo "Le fantôme n'a pas pu être créé.";
+
+// passage après, si on arrive pas à créer le .gh, on modifie pas le gh_top
+$f = fopen("ghost/gh_top_".$_GET["lang"]."_".$_GET["text"],"w");
+fwrite($f,$new_gh_top);
+fclose($f);
 
 
 ?>
