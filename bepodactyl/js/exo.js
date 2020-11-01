@@ -66,7 +66,7 @@ lettres[1][3]=lettres[0][3];
 conseil[3]=1;
 
   titre[0][4]="P et D (majeurs)";
-  titre[1][4]=titre[0][1];
+  titre[1][4]=titre[0][4];
 lettres[0][4]="pdPD";
 lettres[1][4]=lettres[0][4];
     exo[0][4]="Nous nous disputons pour des prunes###Un papa panda divin parade au paradis###Nous parviendrons en Inde avant votre venue###Nous adoptons votre point de vue sur notre patriote###Un artiste peintre en peine a perdu de vue son inspiration###Un oiseau de proie est souvent suspendu au dessus de terre###Nous adoptons une attitude positive et nions avoir pris du poids###Votre titre de transport apatride vous sera repris avant de sortir de notre avion###Nous avons pour ainsi dire perdu notre inspiration et repoussons notre dispensaire";
