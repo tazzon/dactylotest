@@ -111,8 +111,10 @@ function ligne_suivante(reload)
 	}
 	else if (recommencer == true && nb_recom >= (nb_tentatives_recom-1) )
 	{
-		if (le_texte[l-1])
-			le_texte[le_texte.length] = le_texte[l-1];
+		if (le_texte[l-1]) {
+			le_texte[le_texte.length] = le_texte[l - 1];
+			le_texte_alt[le_texte_alt.length] = le_texte_alt[l-1];
+		}
 		nb_recom = 0;
 	}
 	//else if (recommencer == false && nb_recom < (nb_tentatives_recom-1))
