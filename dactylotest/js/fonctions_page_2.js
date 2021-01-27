@@ -90,6 +90,9 @@ function MacOsMod(t)
   var reg=new RegExp("[éÉ]", "g");
   t = t.replace(reg,"´");
   
+  var reg=new RegExp("[çÇ]", "g");
+  t = t.replace(reg,"¸");
+  
   return t;
 }
 
