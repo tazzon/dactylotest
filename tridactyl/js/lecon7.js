@@ -1,6 +1,6 @@
 function lecon7()
 {
-  lecon = new Array;  // ré-init des leçons
+  lecon = new Array; // ré-init des leçons
   
   lecon[1] = "1###que les lle des ent ait our ant men ion###desquelles entourait entourant entourent lesquelles menait menant mentait mentant mentent mention";
   lecon[2] = "2###con ons tio tre res ais par eur est###cons contions contres parais pareur partions restais restions restons";

@@ -8,7 +8,7 @@ var lecon_mots = "";													// les mots de la leçon
 var lecon_tri = "";														// les trigrammes de la leçon
 var rep_mots = 8;//8       											// le nombre de répétitions des mots
 var rep_tri = 13;//13	    												// le nombre de répétitions des trigrammes
-var tri_replace = 4;                          // tout les combiens remplacer par un trigramme différent pour tuer la monotonie
+var tri_replace = 4;                          // tout les combien remplacer par un trigramme différent pour tuer la monotonie
 var le_texte = new Array;											//c'est le texte avec les corrections typo validées dans les options
 var lecon_nb;
 var lecon_en_cours = 1;												// le numéro de la leçon
@@ -19,7 +19,7 @@ var cur_checked = "checked";
 
 
 var description = "<p style=\"text-align:justify\">Leçons à partir de trigrammes les plus récurrents.<br/><br/>"
-                + "L’apprentissage existe en 4 jeux de leçons de longueur différentes répartis en suffisamment de trigrammes pour obtenir au moins 3, 7, 11 et 15 mots.<br/>" 
+                + "L’apprentissage existe en 4 jeux de leçons de longueur différente répartis en suffisamment de trigrammes pour obtenir au moins 3, 7, 11 et 15 mots.<br/>" 
                 + "À chacun de choisir la longueur de l’apprentissage qui lui convient pour apprendre :<br/>"
                 + "<br/>"
                 + "— 30 leçons de 3 mots, 4 à 5 minutes par jour pendant 1 mois ;<br/>"
@@ -27,9 +27,9 @@ var description = "<p style=\"text-align:justify\">Leçons à partir de trigramm
                 + "— 24 leçons de 11 mots, 12 à 15 minutes par jour à la pause déjeuner pendant 1 mois ;<br/>"            
                 + "— 19 leçons de 15 mots, 15 à 20 minutes par jour à la pause déjeuner pendant 1 mois.<br/>"
                 + "<br/>"
-                + "Un accroissement de la vitesse et de la précision de seulement 20% devrait libérer environ 1 heure par jour pour tous les jour de votre vie au bureau.<br/>"
+                + "Un accroissement de la vitesse et de la précision de seulement 20 % devrait libérer environ 1 heure par jour pour tous les jours de votre vie au bureau.<br/>"
                 + "Un doublement de la vitesse devrait permettre de libérer 1/2 journée par jour de clavier.<br/>"
-                + "Même si pendant l’apprentissage votre vitesse se trouvait réduite de 50% cela devrait être compensée par moins de temps perdu en correction orthographique et une meilleur syntaxe.<br/>"
+                + "Même si pendant l’apprentissage votre vitesse se trouvait réduite de 50 % cela devrait être compensé par moins de temps perdu en correction orthographique et une meilleure syntaxe.<br/>"
                 + "Un enfant qui apprendrait la dactylographie à l’aveugle dispose d’un excellent moyen pour réduire la dyslexie et améliorer les résultats scolaires en terme d’efficacité et de présentation et cela en seulement 30 jours d’apprentissage.</p>";
 
 
@@ -72,7 +72,7 @@ function new_text(a)
 	if (!a)
 		a=1;
 
-	// requète javascript pour récupérer numéro###credit###texte
+	// requête JavaScript pour récupérer numéro###credit###texte
 	/*var req = "new_text.php?t="+lecon_nb+"&l="+document.getElementById("lang").value;
 	if (document.getElementById("methode").value == "number")
 	{
@@ -154,7 +154,7 @@ function new_text(a)
 		}
 		ligne++;
 	}
-	// fin de mise ne forme des leçons
+	// fin de mise en forme des leçons
 	ligne_suivante();
 	
 	//document.getElementById("txt").style.backgroundColor = "#f0fff0";						 //on met le fond de la zone de frappe en vert

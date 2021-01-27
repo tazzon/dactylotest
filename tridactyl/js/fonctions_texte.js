@@ -6,7 +6,7 @@ la_couleur_du_curseur = "#40e0d0";
 //cette fonction compare le texte tapé à « le_texte »
 var val="";                                                                    //c'est le contenu du champ texte
 var val_temp=""; //le texte juste avant pour l'anti-correction
-var txt_frap = new Array; // on stock dans ce tableau les différentes lignes de texte que l'on vient de taper
+var txt_frap = new Array; // on stocke dans ce tableau les différentes lignes de texte que l'on vient de taper
 
 function test(e)
 {
@@ -45,9 +45,9 @@ function test(e)
 		//alert(val.replace(reg,"#"));
 		txt_frap[l-1] = val;
 		//nb_sp=0;
-    ligne_suivante();
-    val_temp="";
-    return;
+		ligne_suivante();
+		val_temp="";
+		return;
 	}
 	
 	
@@ -66,7 +66,7 @@ function next(e)
 
 // pour passer à la ligne suivante de la leçon
 var l = 0;
-//var pos_sp=new Array(); // la position de espaces dans la ligne courante pour que le curseur soit au bon endroit
+//var pos_sp=new Array(); // la position des espaces dans la ligne courante pour que le curseur soit au bon endroit
 function ligne_suivante()
 {
 	document.getElementById("txt").value = "";
@@ -94,7 +94,7 @@ function ligne_suivante()
           //on compte le nombre d'espaces dans la ligne pour pouvoir positionner le curseur au bon endroit
           
           
-          //on découpe le tout pour le reconstituer ensuite avec des span identifiant chaque mot (pour le curseur)
+          //on découpe le tout pour le reconstituer ensuite avec des spans identifiant chaque mot (pour le curseur)
           var reg = new RegExp(" ","g");
           var ligne_tmp = le_texte[l+i].split(reg);
           for (var j=0 ; j<ligne_tmp.length ; j++)
@@ -200,7 +200,7 @@ function aff_result() // replacer les undefined par des espaces insécables (pou
 			for (var j=0 ; j<le_texte_tmp.length ; j++)
 			{
         if (!txt_frap_tmp[j])
-          txt_frap_tmp[j] = "_";// pour l'instant c'est la même chose que ce soit souligné parce qu'en suite il devient rouge mais pas d'espace, ils sont pas affichés par le html
+          txt_frap_tmp[j] = "_";// pour l'instant c'est la même chose que ce soit souligné parce qu'ensuite il devient rouge mais pas d'espace, ils ne sont pas affichés par le HTML
         if (le_texte_tmp[j] != txt_frap_tmp[j])
 					txt_frap_tmp[j] = '<span style="text-decoration:underline;color:red"><strong>'+txt_frap_tmp[j]+'</strong></span>';
 			}

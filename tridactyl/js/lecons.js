@@ -1,6 +1,6 @@
 /*******************************************************************************
 Les leçons
-Elles s'organise comme suit :
+Elles s'organisent comme suit :
 1. une ligne de tous les trigrammes
 2. des lignes de chaque trigramme 15 fois
 3. une ligne de tous les trigrammes
