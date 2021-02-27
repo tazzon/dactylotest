@@ -70,16 +70,25 @@
       <input type="button" onclick="this.value=view_options()" value="Afficher les options"/>
       <div class="view_options" id="view_options">
         <p id="options">
-          <input type="checkbox" onclick="options()" id="apo_typ" /> apostrophe typographique<br/>
-          <input type="checkbox" onclick="options()" id="maj_acc" /> majuscules accentuées<br/>
-          <input type="checkbox" onclick="options()" id="ligat" /> ligatures (æ, œ)<br/>
-          <input type="checkbox" onclick="options()" id="pds" /> points de suspension « … »<br/>
-          <input type="checkbox" onclick="options()" id="cadratin" /> tiret cadratin<br/>
-          <input type="checkbox" onclick="options()" id="no_brk_spc" /> espaces insécables<br/>
+          <input type="checkbox" onclick="options()" id="apo_typ" />
+          <label for="apo_typ">apostrophe typographique<br/></label>
+          <input type="checkbox" onclick="options()" id="maj_acc" />
+          <label for="maj_acc">majuscules accentuées<br/></label>
+          <input type="checkbox" onclick="options()" id="ligat" />
+          <label for="ligat">ligatures (æ, œ)<br/></label>
+          <input type="checkbox" onclick="options()" id="pds" />
+          <label for="pds">points de suspension « … »<br/></label>
+          <input type="checkbox" onclick="options()" id="cadratin" />
+          <label for="cadratin" />tiret cadratin<br/></label>
+          <input type="checkbox" onclick="options()" id="no_brk_spc" />
+          <label for="no_brk_spc" />espaces insécables<br/></label>
           
-          &nbsp;&nbsp;&nbsp;<input type="checkbox" onclick="options()" id="no_brk_spc_display"/> les rendre visibles <span style="background-color:#ccc" title="fine insécable"> </span> <span style="background-color:#aaa" title="insécable"> </span><br/>
+          &nbsp;&nbsp;&nbsp;
+          <input type="checkbox" onclick="options()" id="no_brk_spc_display"/>
+          <label for="no_brk_spc_display" />les rendre visibles <span style="background-color:#ccc" title="fine insécable"> </span> <span style="background-color:#aaa" title="insécable"> </span><br/></label>
           
-          <input type="checkbox" onclick="options()" id="quote_fr" /> guillemets français « »<br/>
+          <input type="checkbox" onclick="options()" id="quote_fr" />
+          <label for="quote_fr">guillemets français « »<br/></label>
         </p>
       <br/>
 		<input type="button" value="Enregister les options" onclick="save_opt();this.blur()"/>
@@ -93,8 +102,10 @@
 		<input type="checkbox" id="curseur_actif" checked="checked" /> activer le curseur <span id="demo_curseur" onclick="var c=prompt('nouvelle couleur du curseur (hexa)',cur_col);cur_col=c;this.style.backgroundColor=c;curseur()">&nbsp;</span><br/>
 		-->
 
-		<input type="checkbox" id="ghost_actif" /> activer le fantôme <input id="demo_ghost" style="width:8px;border:none" class="color {valueElement:'gh_cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="gh_cur_col" value="#ffd7ff" onchange="cur_col_ghost=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()"/><br/>
-		<input type="checkbox" id="curseur_actif" checked="checked" /> activer le curseur <input id="demo_curseur" style="width:8px;border:none" class="color {valueElement:'cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="cur_col" value="#ffd700" onchange="cur_col=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()" /><br/>
+		<input type="checkbox" id="ghost_actif" />
+        <label for="ghost_actif">activer le fantôme <input id="demo_ghost" style="width:8px;border:none" class="color {valueElement:'gh_cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="gh_cur_col" value="#ffd7ff" onchange="cur_col_ghost=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()"/><br/><label>
+		<input type="checkbox" id="curseur_actif" checked="checked" />
+        <label for="curseur_actif">activer le curseur <input id="demo_curseur" style="width:8px;border:none" class="color {valueElement:'cur_col',hash:true,caps:false,slider:true,pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}" /><input style="display:none" type="text" id="cur_col" value="#ffd700" onchange="cur_col=this.value;cur_mix=mix_colors(cur_col,cur_col_ghost);curseur()" /><br/></label>
 
 
                 <p style="margin-top:30px">
