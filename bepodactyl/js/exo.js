@@ -178,7 +178,7 @@ lettres[0][16]=";:!";
 lettres[1][16]=lettres[0][16];
 conseil[16]=6;
 //exo[0][16]="Et revoilà la sous-préfète !###La voilà ; elle arrive !";
-exo[0][16]="Et revoilà la sous-préfète !###La voilà ; elle arrive !";
+exo[0][16]="Et revoilà la sous-préfète !###La voilà : elle arrive !";
 exo[1][16]=exo[0][16].replace(/'/g,"’");
 
 titre[0][17]="Parenthèses";
