@@ -25,17 +25,17 @@ function new_text(a)
   curseur_err_bol = false;
   val_result("reset");  
 
-  if(a=="new")
+  if (a == "new")
   {
     // requète javascript pour récupérer numéro###credit###texte
-    var req = "new_text.php?t="+text_nb+"&l="+document.getElementById("lang").value;
-    if (document.getElementById("methode").value == "number")
-    {
-      var prompt_result = prompt("Indiquer ici le numéro du texte que vous souhaitez charger.",text_nb);
-      if (prompt_result == null)
-        return; 
-      req += "&force="+prompt_result;
+    var req = "new_text.php?t=" + text_nb + "&l=" + document.getElementById("lang").value;
+
+    let textNumber = getTextNumber()
+    if (textNumber) {
+      req += `&force=${textNumber}`
+      console.log(req)
     }
+    
     var req_text = request(req,"text_nmbr");
     
     var reg = new RegExp("###","g");
@@ -64,6 +64,18 @@ function new_text(a)
   else
     var txt_link = text_source;
   document.getElementById("text_nmbr").innerHTML = "Texte nº"+text_nb+' — source : <a title="'+text_source+'" href="'+text_source+'">'+txt_link+"</a>";
+}
+
+function getTextNumber() {
+  const searchParams = new URLSearchParams(window.location.search)
+  const textid = searchParams.get('textid')
+  if (textid) {
+    return parseInt(textid)
+  }
+  
+  if (document.getElementById("methode").value == "number") {
+    return prompt("Indiquer ici le numéro du texte que vous souhaitez charger.", text_nb);
+  }
 }
 
 // retourne le texte à taper avec les diacritiques à la place des lettres pour
